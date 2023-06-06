@@ -69,11 +69,11 @@ function addMouseover(foodImage, singleFood){
         const mouseoverServing = document.getElementById('mouseoverServing')
 
         mouseoverName.textContent = singleFood.name
-        mouseoverCalories.textContent = singleFood.nutrition.calories
-        mouseoverSugar.textContent = singleFood.nutrition.sugar
-        mouseoverFat.textContent = singleFood.nutrition.fat
-        mouseoverPro.textContent = singleFood.nutrition.protein
-        mouseoverServing.textContent = singleFood.nutrition["serving-size"]
+        mouseoverCalories.textContent = `${singleFood.nutrition.calories} Cals`
+        mouseoverSugar.textContent = `${singleFood.nutrition.sugar} g`
+        mouseoverFat.textContent = `${singleFood.nutrition.fat} g`
+        mouseoverPro.textContent = `${singleFood.nutrition.protein} g`
+        mouseoverServing.textContent = `${singleFood.nutrition["serving-size"]} g`
         
     })
 }
