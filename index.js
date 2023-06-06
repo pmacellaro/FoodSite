@@ -10,6 +10,10 @@ const totalSug = document.getElementById('sugar-total')
 const totalFat = document.getElementById('fat-total')
 const totalPro = document.getElementById('protein-total')
 const totalSS = document.getElementById('serving-size-total')
+//achievement elements
+const calGoal = document.getElementById('calories-until')
+const achievementImage = document.getElementById('achievement-image')
+const achievementDesc = document.getElementById('achievement-description')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let testFoodObj
@@ -19,8 +23,6 @@ fetch("http://localhost:3000/food")
     .then((r) => r.json())
     .then((foodObj) => {
         init(foodObj)
-        testFoodObj = foodObj
-        //console.log(foodObj[0].nutrition)
     })
 
 //initialize
@@ -50,11 +52,11 @@ function dragDrop(foodItemElement){
 function addNutrition(foodItem){
     Object.keys(foodItem.nutrition).forEach((key) => 
         nutritionTotal[key] += foodItem.nutrition[key])
-    renderNutrition(foodItem)
+    renderNutrition()
 }
 
 //render nutrition total -- F
-function renderNutrition(foodItem){
+function renderNutrition(){
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
@@ -62,7 +64,10 @@ function renderNutrition(foodItem){
     totalSS.textContent = `Serving Amount: ${nutritionTotal["serving-size"]} g`
 }
 
-//facts -- F
+//render achievement -- F
+function renderAchievement(){
+    
+}
 
 //food form -- S
 foodForm.addEventListener('submit', (e) =>{
