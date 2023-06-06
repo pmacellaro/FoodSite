@@ -158,31 +158,87 @@
     },
     {
       "id": 4,
+      "name": "cha cha slide",
+      "cal-req": 720,
+      "image_url": "https://i.pinimg.com/originals/fb/e3/8b/fbe38bbacbaa59021bfb5e248df8d254.jpg",
+      "decription": "dancing the cha-cha-slide for 2 hours!"
+    },
+    {
+      "id": 5,
+      "name": "sleeping",
+      "cal-req": "960",
+      "image_url": "https://www.bodylogics.co.uk/wp-content/uploads/2021/12/funny-people-sleeping-positions-3-5d760c0f1015e__700.jpg",
+      "decription": "sleeping non-stop for 24 hours!"
+    },
+    {
+      "id": 6,
       "name": "box a bear",
       "cal-req": 1600,
       "image_url": "https://im.indiatimes.in/media/content/2016/Jul/normal_rocky_and_bear_1467892610.jpg",
       "description": "boxing a bear for an hour! (survival not guaranteed)"
     },
     {
-      "id": 5,
+      "id": 7,
       "name": "marathon",
       "cal-req": 2600,
       "image_url": "https://media.istockphoto.com/id/143919656/photo/group-of-runners-in-a-cross-country-race.jpg?s=612x612&w=0&k=20&c=gvW5p2TVibpHuQ4v-UI4gM7Z5Xapyhf5K-vCL1jw_IM=",
       "description": "running a marathon!"
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "pogo-stick",
       "cal-req": 3000,
       "image_url": "https://media.istockphoto.com/id/108347845/photo/spring-your-business.jpg?s=612x612&w=0&k=20&c=Gfhc6ztcKnn7ePF_FrPp3_1xZwo4YtiJEuV_izfKo3I=",
       "description": "pogo-sticking across the Grand Canyon!"
     },
     {
-      "id": 7,
+      "id": 9,
       "name": "t-rex",
       "cal-req": 5000,
-      "image_url": "",
-      "description": "bench-pressing a small tyannosaurus rex! (15 reps)"
+      "image_url": "https://imgur.com/a/86RptFY",
+      "description": "bench-pressing a small tyrannosaurus rex! (15 reps)"
+    },
+    {
+      "id": 10,
+      "name": "the office watching",
+      "cal-req": 8080,
+      "image_url": "https://www.looper.com/img/gallery/the-office-funniest-moments-ranked/tobys-return-from-costa-rica-1627594561.jpg",
+      "description": "watching every episode of every season of The Office!"
+    },
+    {
+      "id": 11,
+      "name": "hot dog eating",
+      "cal-req": 15000,
+      "image_url": "https://www.commercialappeal.com/gcdn/presto/2022/06/30/PMCA/a4a67d73-146f-40f7-bcee-7a83d5c74367-06272022_zm_hotdog-eater003.jpg",
+      "description": "fully digesting 1500 hot dogs! (does not include chewing and swallowing)"
+    },
+    {
+      "id": 12,
+      "name": "crying",
+      "cal-req": 26200,
+      "image_url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Michael_Jordan_crying.jpg",
+      "description": "crying for two weeks straight!"
+    },
+    {
+      "id": 13,
+      "name": "mow all of central park",
+      "cal-req": 44405,
+      "image_url": "https://media.istockphoto.com/id/182825693/photo/screaming-gardener-man-pushing-a-red-lawn-mower.jpg?s=612x612&w=0&k=20&c=r6ZHnJ-l6f5q5CmRn3QL7_e4ytG2fgD1TaDK8eCXyBg=",
+      "description": "pushing a lawn mower over all of Central Park!"
+    },
+    {
+      "id": 14,
+      "name": "graduating flatiron",
+      "cal-req": 58320,
+      "image_url": "https://thumbs.dreamstime.com/b/frustrated-computer-1446513.jpg",
+      "description": "graduating Flatiron School's Live Software Engineering Bootcamp!"
+    },
+    {
+      "id": 15,
+      "name": "procrastinating",
+      "cal-req": 166785,
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLdbREjV3IfL4WIF4JOu_cs9necc4Ws3oFeg&usqp=CAU",
+      "description": "procrastinating in Flatiron course-work by completing ALL previous milestones + then graduating from Flatiron"
     }
   ]
 }
