@@ -10,6 +10,12 @@ const totalSug = document.getElementById('sugar-total')
 const totalFat = document.getElementById('fat-total')
 const totalPro = document.getElementById('protein-total')
 const totalSS = document.getElementById('serving-size-total')
+//achievement elements
+let nextAchievementId = 1
+let nextAchievement
+const calGoal = document.getElementById('calories-until')
+const achievementImage = document.getElementById('achievement-image')
+const achievementDesc = document.getElementById('achievement-description')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let testFoodObj
@@ -20,23 +26,29 @@ fetch("http://localhost:3000/food")
     .then((foodObj) => {
         init(foodObj)
         testFoodObj = foodObj
-        //console.log(foodObj[0].nutrition)
     })
 
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
-    renderNutrition(foodItem)
-    drop()
+    console.log('hello')
+    renderNutrition()
+    getNextAchievement()
+    console.log(nextAchievement)
 }
 
-//renders one menu food item, calls dragDrop -- P
-function renderMenuItem(foodItem){
-
-    //call dragDrop
-    //call addNutrition
+//fetch next achievement
+function getNextAchievement(){
+    fetch(`http://localhost:3000/achievements/${nextAchievementId}`)
+        .then((r) => r.json())
+        .then((achievementObj) => {
+            nextAchievement = achievementObj
+            renderAchievement()
+        })
+    nextAchievementId++
 }
 
+//renders one menu food item, calls dragDrop and addMouseover -- P
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
     let foodImage = document.createElement('img')
@@ -46,6 +58,7 @@ function createFood(singleFood) {
     addMouseover(foodImage, singleFood)
 }  
 
+//mouseover for menu item
 function addMouseover(foodImage, singleFood){
     foodImage.addEventListener('mouseover', (e) => {
         const mouseoverName = document.getElementById('mouseoverName')
@@ -64,9 +77,9 @@ function addMouseover(foodImage, singleFood){
         
     })
 }
+
 //drag and drop feature -- P
 function dragDrop(foodItemElement){
-}
     let foodItem = document.createElement('img')
     foodItem.id = singleFood.name
     foodItem.draggable=true
@@ -75,20 +88,16 @@ function dragDrop(foodItemElement){
     foodDiv.appendChild(foodItem)   
 }   
 
-
 //nutrition total -- F
 function addNutrition(foodItem){
     Object.keys(foodItem.nutrition).forEach((key) => 
         nutritionTotal[key] += foodItem.nutrition[key])
-    renderNutrition(foodItem)
-}
-//drag and drop feature -- P
-function dragDrop {
-
+    renderNutrition()
+    renderAchievement()
 }
 
 //render nutrition total -- F
-function renderNutrition(foodItem){
+function renderNutrition(){
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
@@ -96,7 +105,19 @@ function renderNutrition(foodItem){
     totalSS.textContent = `Serving Amount: ${nutritionTotal["serving-size"]} g`
 }
 
-//facts -- F
+//render achievement -- F
+function renderAchievement(){
+    //if goalpost is met
+    if (nutritionTotal.calories >= nextAchievement['cal-req']){
+        //update achievement information box with new achievement
+        achievementImage.src = nextAchievement.image_url
+        achievementDesc.textContent = nextAchievement.description
+        //get next achievement
+        getNextAchievement()
+    }
+    //update goalpost
+    calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
+}
 
 //food form -- S
 foodForm.addEventListener('submit', (e) =>{
