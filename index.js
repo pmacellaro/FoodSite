@@ -4,12 +4,16 @@ const foodMenu = document.getElementById('food-menu') //shanley
 const nutritionBox = document.getElementById('nutrition-total') //frankie
 const facts = document.getElementById('facts') 
 const foodForm = document.getElementById('food-form') //shanley
+let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
+let testFoodObj
 
 //fetch and call initialize
 fetch("http://localhost:3000/food")
     .then((r) => r.json())
     .then((foodObj) => {
-        init(foodObj)
+        //init(foodObj)
+        testFoodObj = foodObj
+        //console.log(foodObj[0].nutrition)
     })
 
 //initialize
@@ -38,6 +42,8 @@ function dragDrop(foodItemElement){
 
 //nutrition total -- F
 function addNutrition(foodItem){
+    Object.keys(foodItem.nutrition).forEach((key) => 
+        nutritionTotal[key] += foodItem.nutrition[key])
 }
 
 //facts -- F
