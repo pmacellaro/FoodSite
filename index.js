@@ -89,6 +89,7 @@ foodForm.addEventListener('submit', (e) =>{
     fetch("http://localhost:3000/food", postNewFood)
     .then(r => r.json())
     .then( newFood => createFood(newFood))
+    foodForm.reset()
 
     
     

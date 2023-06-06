@@ -1,150 +1,137 @@
 {
-  "food": [
-    {
-      "id": 1,
-      "name": "Strawberry",
-      "image_url": "https://vimafoods.com/wp-content/uploads/2020/05/fresas-frescas.jpg",
-      "nutrition": {
-        "calories": 32,
-        "sugar": 4.9,
-        "fat": 0.3,
-        "protein": 0.7,
-        "serving-size": 100
-      },
-      "nutrition_url": "https://www.healthline.com/nutrition/foods/strawberries#nutrition"
-    },
-    {
-      "id": 2,
-      "name": "French Fries",
-      "image_url": "https://www.seriouseats.com/thmb/Il7mv9ZSDh7n0cZz3t3V-28ImkQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__04__20180309-french-fries-vicky-wasik-15-5a9844742c2446c7a7be9fbd41b6e27d.jpg",
-      "servings": "100 g",
-      "nutrition": {
-        "calories": 196,
-        "sugar": 1.3,
-        "fat": 13.1,
-        "protein": 1.9,
-        "serving-size": 100
-      },
-      "nutrition_url": "https://www.verywellfit.com/french-fries-nutrition-facts-and-health-benefits-5070457"
-    },
-    {
-      "id": 3,
-      "name": "Bacon",
-      "image_url": "https://assets.epicurious.com/photos/630386df4eaa77f49a537aa5/4:3/w_4557,h_3418,c_limit/Brown_Sugar_Bacon_RECIPE_081722_38635.jpg",
-      "servings": "34.5 g",
-      "nutrition": {
-        "calories": 161,
-        "sugar": 0,
-        "fat": 12,
-        "protein": 12,
-        "serving-size": 34.5
-      },
-      "nutrition_url": "https://www.eatthismuch.com/food/nutrition/pancakes,4206/"
-    },
-    {
-      "id": 4,
-      "name": "Cheeseburger",
-      "image_url": "https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-08/double-cheeseburger-recipe-burger-king-copycat-1024x439.jpg",
-      "servings": "130 g",
-      "nutrition": {
-        "calories": 350,
-        "sugar": 6,
-        "fat": 14,
-        "protein": 17,
-        "serving-size": 130
-      },
-      "nutrition_url": "https://www.verywellfit.com/cheeseburger-nutrition-facts-and-healthier-swaps-4109684"
-    },
-    {
-      "id": 5,
-      "name": "Pizza",
-      "image_url": "https://images.squarespace-cdn.com/content/v1/5b186b0b96d4551e9ec7c2d8/93ba7adb-c90e-46ef-abfe-78327bb608a1/The+Piehole+Pizzeria+Tulsa+OK+USA+TulsaGo.jpg",
-      "nutrition": {
-        "calories": 285,
-        "sugar": 3.8,
-        "fat": 10.4,
-        "protein": 12.2,
-        "serving-size": 107
-      },
-      "nutrition_url": "https://www.verywellfit.com/pizza-pointers-3495882"
-    },
-    {
-      "id": 6,
-      "name": "Steak",
-      "image_url": "https://www.seriouseats.com/thmb/-KA2hwMofR2okTRndfsKtapFG4Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg",
-      "nutrition": {
-        "calories": 179,
-        "sugar": 0,
-        "fat": 7.6,
-        "protein": 26,
-        "serving-size": 85
-      },
-      "nutrition_url": "https://www.verywellfit.com/the-best-ways-to-eat-steak-on-a-diet-3495219"
-    },
-    {
-      "id": 7,
-      "name": "Asparagus",
-      "image_url": "https://www.foodandwine.com/thmb/F5AyGqvRO3i9MdIlUAo6wbdSvjU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/baked-asparagus-FT-RECIPE0921-93ca7be835d345d8aa2bea244e463f1a.jpg",
-      "nutrition": {
-        "calories": 20,
-        "sugar": 1.2,
-        "fat": 0.2,
-        "protein": 2.2,
-        "serving-size": 90
-      },
-      "nutrition_url": "https://www.verywellfit.com/asparagus-nutrition-facts-calories-and-their-health-benefits-4118017"
-    },
-    {
-      "id": 8,
-      "name": "Rice",
-      "image_url": "https://thewanderlustkitchen.com/wp-content/uploads/2013/12/Perfect-Jasmine-Rice-9-square-1200-500x500.jpg",
-      "nutrition": {
-        "calories": 242,
-        "sugar": 0,
-        "fat": 0.4,
-        "protein": 4.4,
-        "serving-size": 186
-      },
-      "nutrition_url": "https://www.verywellfit.com/rice-nutrition-facts-calories-and-health-benefits-4119792"
-    },
-    {
-      "id": 9,
-      "name": "Blueberries",
-      "image_url": "https://images.heb.com/is/image/HEBGrocery/001146492-1",
-      "nutrition": {
-        "calories": 84,
-        "sugar": 15,
-        "fat": 0.5,
-        "protein": 1,
-        "serving-size": 148
-      },
-      "nutrition_url": "https://www.verywellfit.com/blueberries-nutrition-facts-calories-and-health-benefits-4109926"
-    },
-    {
-      "id": 10,
-      "name": "chicken nuggets",
-      "image_url": "https://aileencooks.com/wp-content/uploads/2019/12/air-fryer-frozen-chicken-nuggets-3.jpg",
-      "nutrition": {
-        "calories": 180,
-        "sugar": 0,
-        "fat": 11,
-        "protein": 10,
-        "serving-size": 100
-      },
-      "nutrition_url": "https://fastfoodnutrition.org/mcdonalds/chicken-mcnuggets/4-piece"
-    },
-    {
-      "name": "Pickle",
-      "image_url": "data:image/jpeg;base64,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",
-      "nutrition": {
-        "calories": "1",
-        "sugar": "12",
-        "fat": "1",
-        "protein": "1",
-        "serving-size": "1"
-      },
-      "nutrition_url": "",
-      "id": 11
-    }
-  ]
+    "food": [
+        {
+            "id": 1,
+            "name": "Strawberry",
+            "image_url": "https://vimafoods.com/wp-content/uploads/2020/05/fresas-frescas.jpg",
+            "nutrition":{
+                "calories": 32,
+                "sugar": 4.9,
+                "fat": 0.3,
+                "protein": 0.7,
+                "serving-size": 100
+            },
+            "nutrition_url": "https://www.healthline.com/nutrition/foods/strawberries#nutrition"
+        },
+        {
+            "id": 2,
+            "name": "French Fries",
+            "image_url": "https://www.seriouseats.com/thmb/Il7mv9ZSDh7n0cZz3t3V-28ImkQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__04__20180309-french-fries-vicky-wasik-15-5a9844742c2446c7a7be9fbd41b6e27d.jpg",
+            "servings": "100 g",
+            "nutrition":{
+                "calories": 196,
+                "sugar": 1.3,
+                "fat": 13.1,
+                "protein": 1.9,
+                "serving-size": 100
+            },
+            "nutrition_url": "https://www.verywellfit.com/french-fries-nutrition-facts-and-health-benefits-5070457"
+        },
+        {
+            "id": 3,
+            "name": "Bacon",
+            "image_url": "https://assets.epicurious.com/photos/630386df4eaa77f49a537aa5/4:3/w_4557,h_3418,c_limit/Brown_Sugar_Bacon_RECIPE_081722_38635.jpg",
+            "servings": "34.5 g",
+            "nutrition":{
+                "calories": 161,
+                "sugar": 0,
+                "fat": 12,
+                "protein": 12,
+                "serving-size": 34.5
+            },
+            "nutrition_url": "https://www.eatthismuch.com/food/nutrition/pancakes,4206/"
+        },
+        {
+            "id": 4,
+            "name": "Cheeseburger",
+            "image_url": "https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-08/double-cheeseburger-recipe-burger-king-copycat-1024x439.jpg",
+            "servings": "130 g",
+            "nutrition":{
+                "calories": 350,
+                "sugar": 6,
+                "fat": 14,
+                "protein": 17,
+                "serving-size": 130
+            },
+            "nutrition_url": "https://www.verywellfit.com/cheeseburger-nutrition-facts-and-healthier-swaps-4109684"
+        },
+        {
+            "id": 5,
+            "name": "Pizza",
+            "image_url": "https://images.squarespace-cdn.com/content/v1/5b186b0b96d4551e9ec7c2d8/93ba7adb-c90e-46ef-abfe-78327bb608a1/The+Piehole+Pizzeria+Tulsa+OK+USA+TulsaGo.jpg",
+            "nutrition":{
+                "calories": 285,
+                "sugar": 3.8,
+                "fat": 10.4,
+                "protein": 12.2,
+                "serving-size": 107
+            },
+            "nutrition_url": "https://www.verywellfit.com/pizza-pointers-3495882"
+        },
+        {
+            "id": 6,
+            "name": "Steak",
+            "image_url": "https://www.seriouseats.com/thmb/-KA2hwMofR2okTRndfsKtapFG4Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg",
+            "nutrition":{
+                "calories": 179,
+                "sugar": 0,
+                "fat": 7.6,
+                "protein": 26,
+                "serving-size": 85
+            }, 
+            "nutrition_url": "https://www.verywellfit.com/the-best-ways-to-eat-steak-on-a-diet-3495219"
+        }, 
+        {
+            "id": 7,
+            "name": "Asparagus",
+            "image_url": "https://www.foodandwine.com/thmb/F5AyGqvRO3i9MdIlUAo6wbdSvjU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/baked-asparagus-FT-RECIPE0921-93ca7be835d345d8aa2bea244e463f1a.jpg",
+            "nutrition":{
+                "calories": 20,
+                "sugar": 1.2,
+                "fat": 0.2,
+                "protein": 2.2,
+                "serving-size": 90
+            },
+            "nutrition_url": "https://www.verywellfit.com/asparagus-nutrition-facts-calories-and-their-health-benefits-4118017"
+        },
+        {
+            "id": 8,
+            "name": "Rice",
+            "image_url": "https://thewanderlustkitchen.com/wp-content/uploads/2013/12/Perfect-Jasmine-Rice-9-square-1200-500x500.jpg",
+            "nutrition":{
+                "calories": 242,
+                "sugar": 0,
+                "fat": 0.4,
+                "protein": 4.4,
+                "serving-size": 186
+            },
+            "nutrition_url": "https://www.verywellfit.com/rice-nutrition-facts-calories-and-health-benefits-4119792"
+        },
+        {
+            "id": 9,
+            "name": "Blueberries",
+            "image_url": "https://images.heb.com/is/image/HEBGrocery/001146492-1",
+            "nutrition":{
+                "calories": 84,
+                "sugar": 15,
+                "fat": 0.5,
+                "protein": 1,
+                "serving-size": 148
+            },
+            "nutrition_url": "https://www.verywellfit.com/blueberries-nutrition-facts-calories-and-health-benefits-4109926"
+        },
+        {
+            "id": 10,
+            "name": "chicken nuggets",
+            "image_url": "https://aileencooks.com/wp-content/uploads/2019/12/air-fryer-frozen-chicken-nuggets-3.jpg",
+            "nutrition":{
+                "calories": 180,
+                "sugar": 0,
+                "fat": 11,
+                "protein": 10,
+                "serving-size": 100
+            },
+            "nutrition_url": "https://fastfoodnutrition.org/mcdonalds/chicken-mcnuggets/4-piece"
+        }
+    ]
 }
