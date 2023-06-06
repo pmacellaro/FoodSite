@@ -26,11 +26,13 @@ fetch("http://localhost:3000/food")
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
-    renderNutrition()
+    renderNutrition(foodItem)
+    drop()
 }
 
 //renders one menu food item, calls dragDrop -- P
 function renderMenuItem(foodItem){
+
     //call dragDrop
     //call addNutrition
 }
@@ -38,19 +40,23 @@ function renderMenuItem(foodItem){
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
     let foodItem = document.createElement('img')
+    foodItem.id = singleFood.name
+    foodItem.draggable=true
     foodItem.classList.add('foods')
     foodItem.src = singleFood.image_url
     foodDiv.appendChild(foodItem)   
 }   
-//drag and drop feature -- P
-function dragDrop(foodItemElement){
-}
+
 
 //nutrition total -- F
 function addNutrition(foodItem){
     Object.keys(foodItem.nutrition).forEach((key) => 
         nutritionTotal[key] += foodItem.nutrition[key])
     renderNutrition(foodItem)
+}
+//drag and drop feature -- P
+function dragDrop {
+
 }
 
 //render nutrition total -- F
