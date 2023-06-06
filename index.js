@@ -54,7 +54,11 @@ function addNutrition(foodItem){
 }
 
 //render nutrition total -- F
+<<<<<<< HEAD
 function renderNutrition(){
+=======
+function renderNutrition(foodItem){
+>>>>>>> a8f92b5 (add render nutrition total)
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
