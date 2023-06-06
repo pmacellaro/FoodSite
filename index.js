@@ -18,7 +18,7 @@ let testFoodObj
 fetch("http://localhost:3000/food")
     .then((r) => r.json())
     .then((foodObj) => {
-        //init(foodObj)
+        init(foodObj)
         testFoodObj = foodObj
         //console.log(foodObj[0].nutrition)
     })
@@ -26,6 +26,7 @@ fetch("http://localhost:3000/food")
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
+    renderNutrition()
 }
 
 //renders one menu food item, calls dragDrop -- P
@@ -53,7 +54,7 @@ function addNutrition(foodItem){
 }
 
 //render nutrition total -- F
-function renderNutrition(foodItem){
+function renderNutrition(){
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
