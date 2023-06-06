@@ -65,7 +65,7 @@ function addNutrition(foodItem){
 }
 
 //render nutrition total -- F
-function renderNutrition(){
+function renderNutrition(foodItem){
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
@@ -100,7 +100,6 @@ foodForm.addEventListener('submit', (e) =>{
     fetch("http://localhost:3000/food", postNewFood)
     .then(r => r.json())
     .then( newFood => createFood(newFood))
-    foodForm.reset()
 
     
     

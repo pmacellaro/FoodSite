@@ -133,5 +133,56 @@
             },
             "nutrition_url": "https://fastfoodnutrition.org/mcdonalds/chicken-mcnuggets/4-piece"
         }
+    ],
+    "achievements":[
+        {
+            "id": 1,
+            "name": "hopscotch",
+            "cal-req": 170,
+            "image_url": "",
+            "description": "hopscotching for half an hour!"
+        },
+        {
+            "id": 2,
+            "name": "mascot",
+            "cal-req": 270,
+            "image_url": "",
+            "description": "standing in a mascot costume for one hour!"
+        },
+        {
+            "id": 3,
+            "name": "stress ball",
+            "cal-req": 450,
+            "image_url": "",
+            "description": "squeezing a stress ball three-hundred times!"
+        },
+        {
+            "id": 4,
+            "name": "box a bear",
+            "cal-req": 1600,
+            "image_url": "",
+            "description": "boxing a bear for an hour! (survival not guaranteed)"
+        },
+        {
+            "id": 5,
+            "name": "marathon",
+            "cal-req": 2600,
+            "image_url": "",
+            "description": "running a marathon!"
+        },
+        {
+            "id": 6,
+            "name": "pogo-stick",
+            "cal-req": 3000,
+            "image_url": "",
+            "description": "pogo-sticking across the Grand Canyon!"
+        },
+        {
+            "id": 7,
+            "name": "t-rex",
+            "cal-req": 5000,
+            "image_url": "",
+            "description": "bench-pressing a small tyannosaurus rex! (15 reps)"
+        }
     ]
 }
