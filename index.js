@@ -14,7 +14,7 @@ fetch("http://localhost:3000/food")
 
 //initialize
 function init(foodObj){
-    createFood(foodObj)
+    foodObj.forEach(foodItem => createFood(foodItem))
 }
 
 //renders one menu food item, calls dragDrop -- P
@@ -23,14 +23,12 @@ function renderMenuItem(foodItem){
     //call addNutrition
 }
 
-function createFood(foodArray) {
-    foodArray.forEach((element) => {
+function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
     let foodItem = document.createElement('img')
     foodItem.classList.add('foods')
-    foodItem.src = element.image_url
+    foodItem.src = singleFood.image_url
     foodDiv.appendChild(foodItem)   
-    });
 }   
 //drag and drop feature -- P
 function dragDrop(foodItemElement){
@@ -57,6 +55,16 @@ foodForm.addEventListener('submit', (e) =>{
         },
         nutrition_url: e.target["nutrition_url"].value
     }
+    const postNewFood = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(newFood)
+    }
+    fetch("http://localhost:3000/food", postNewFood)
+    .then(r => r.json())
+    .then( newFood => createFood(newFood))
 
     
     
