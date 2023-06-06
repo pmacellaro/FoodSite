@@ -12,8 +12,16 @@ const totalPro = document.getElementById('protein-total')
 const totalSS = document.getElementById('serving-size-total')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
+<<<<<<< HEAD
 const calorieCheckPoints = []
 let unlockedCounter = 0
+=======
+<<<<<<< HEAD
+=======
+const calorieCheckPoints = []
+let unlockedCounter = 0
+>>>>>>> 1bbde97 (add achievements into db.json and wip)
+>>>>>>> main
 let testFoodObj
 
 //fetch and call initialize
@@ -56,7 +64,11 @@ function addNutrition(foodItem){
 }
 
 //render nutrition total -- F
+<<<<<<< HEAD
 function renderNutrition(){
+=======
+function renderNutrition(foodItem){
+>>>>>>> a8f92b5 (add render nutrition total)
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
@@ -94,6 +106,7 @@ foodForm.addEventListener('submit', (e) =>{
     fetch("http://localhost:3000/food", postNewFood)
     .then(r => r.json())
     .then( newFood => createFood(newFood))
+    foodForm.reset()
 
     
     
