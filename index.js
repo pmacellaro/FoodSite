@@ -37,11 +37,22 @@ function renderMenuItem(foodItem){
 
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
-    let foodItem = document.createElement('img')
-    foodItem.classList.add('foods')
-    foodItem.src = singleFood.image_url
-    foodDiv.appendChild(foodItem)   
-}   
+    let foodImage = document.createElement('img')
+    foodImage.classList.add('foods')
+    foodImage.src = singleFood.image_url
+    foodDiv.appendChild(foodImage)   
+    addMouseover(foodImage, singleFood)
+}  
+
+function addMouseover(foodImage, singleFood){
+    foodImage.addEventListeners('mouseover', (e) => {
+        let infoDiv = document.createElement('div')
+        let infoUl = document.createElement('ul')
+        let infoLi = document.createElement('li')
+
+        
+    })
+}
 //drag and drop feature -- P
 function dragDrop(foodItemElement){
 }
