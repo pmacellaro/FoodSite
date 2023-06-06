@@ -1,7 +1,11 @@
 .foods {
+    columns: 2;
     width: 100px;
     height: 100px;
     background-color: #eff3ff;;
     color: white;
-    padding: 10px;
+    border: 2px solid #000;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
 }

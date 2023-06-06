@@ -13,19 +13,29 @@ const totalSS = document.getElementById('serving-size-total')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let testFoodObj
+//nutrition total list elements
+const totalCal = document.getElementById('calories-total')
+const totalSug = document.getElementById('sugar-total')
+const totalFat = document.getElementById('fat-total')
+const totalPro = document.getElementById('protein-total')
+const totalSS = document.getElementById('serving-size-total')
+//nutrition total
+let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
+let testFoodObj
 
 //fetch and call initialize
 fetch("http://localhost:3000/food")
     .then((r) => r.json())
     .then((foodObj) => {
-        //init(foodObj)
+        init(foodObj)
         testFoodObj = foodObj
         //console.log(foodObj[0].nutrition)
     })
 
 //initialize
 function init(foodObj){
-    createFood(foodObj)
+    foodObj.forEach(foodItem => createFood(foodItem))
+    renderNutrition()
 }
 
 //renders one menu food item, calls dragDrop -- P
@@ -33,16 +43,14 @@ function renderMenuItem(foodItem){
     //call dragDrop
     //call addNutrition
 }
-function createFood(foodArray) {
-foodArray.forEach((element) => {
-let foodDiv = document.getElementById('food-menu')
-let foodItem = document.createElement('img')
-foodItem.classList.add('foods')
-foodItem.src = element.image_url
-foodDiv.appendChild(foodItem)   
-});
 
-}
+function createFood(singleFood) {
+    let foodDiv = document.getElementById('food-menu')
+    let foodItem = document.createElement('img')
+    foodItem.classList.add('foods')
+    foodItem.src = singleFood.image_url
+    foodDiv.appendChild(foodItem)   
+}   
 //drag and drop feature -- P
 function dragDrop(foodItemElement){
 }
@@ -55,7 +63,7 @@ function addNutrition(foodItem){
 }
 
 //render nutrition total -- F
-function renderNutrition(foodItem){
+function renderNutrition(){
     totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
     totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
     totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
@@ -67,4 +75,30 @@ function renderNutrition(foodItem){
 
 //food form -- S
 foodForm.addEventListener('submit', (e) =>{
+    e.preventDefault()
+    const newFood = {
+        name: e.target.name.value,
+        image_url: e.target["image-input"].value,
+        nutrition:{
+            calories: e.target.servings.value,
+            sugar: e.target.calories.value,
+            fat: e.target.fat.value,
+            protein: e.target.protein.value,
+            "serving-size": e.target.servings.value
+        },
+        nutrition_url: e.target["nutrition_url"].value
+    }
+    const postNewFood = {
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(newFood)
+    }
+    fetch("http://localhost:3000/food", postNewFood)
+    .then(r => r.json())
+    .then( newFood => createFood(newFood))
+
+    
+    
 })
