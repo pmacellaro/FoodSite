@@ -12,15 +12,8 @@ const totalPro = document.getElementById('protein-total')
 const totalSS = document.getElementById('serving-size-total')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
-let testFoodObj
-//nutrition total list elements
-const totalCal = document.getElementById('calories-total')
-const totalSug = document.getElementById('sugar-total')
-const totalFat = document.getElementById('fat-total')
-const totalPro = document.getElementById('protein-total')
-const totalSS = document.getElementById('serving-size-total')
-//nutrition total
-let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
+const calorieCheckPoints = []
+let unlockedCounter = 0
 let testFoodObj
 
 //fetch and call initialize
@@ -72,6 +65,9 @@ function renderNutrition(){
 }
 
 //facts -- F
+function renderFacts(){
+
+}
 
 //food form -- S
 foodForm.addEventListener('submit', (e) =>{
