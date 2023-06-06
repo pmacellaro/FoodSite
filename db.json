@@ -58,7 +58,7 @@
         {
             "id": 5,
             "name": "Pizza",
-            "image_url": "",
+            "image_url": "https://images.squarespace-cdn.com/content/v1/5b186b0b96d4551e9ec7c2d8/93ba7adb-c90e-46ef-abfe-78327bb608a1/The+Piehole+Pizzeria+Tulsa+OK+USA+TulsaGo.jpg",
             "nutrition":{
                 "calories": 285,
                 "sugar": 3.8,
@@ -71,7 +71,7 @@
         {
             "id": 6,
             "name": "Steak",
-            "image_url": "",
+            "image_url": "https://www.seriouseats.com/thmb/-KA2hwMofR2okTRndfsKtapFG4Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2015__05__Anova-Steak-Guide-Sous-Vide-Photos15-beauty-159b7038c56a4e7685b57f478ca3e4c8.jpg",
             "nutrition":{
                 "calories": 179,
                 "sugar": 0,
@@ -84,7 +84,7 @@
         {
             "id": 7,
             "name": "Asparagus",
-            "image_url": "",
+            "image_url": "https://www.foodandwine.com/thmb/F5AyGqvRO3i9MdIlUAo6wbdSvjU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/baked-asparagus-FT-RECIPE0921-93ca7be835d345d8aa2bea244e463f1a.jpg",
             "nutrition":{
                 "calories": 20,
                 "sugar": 1.2,
@@ -97,7 +97,7 @@
         {
             "id": 8,
             "name": "Rice",
-            "image_url": "",
+            "image_url": "https://thewanderlustkitchen.com/wp-content/uploads/2013/12/Perfect-Jasmine-Rice-9-square-1200-500x500.jpg",
             "nutrition":{
                 "calories": 242,
                 "sugar": 0,
@@ -110,7 +110,7 @@
         {
             "id": 9,
             "name": "Blueberries",
-            "image_url": "",
+            "image_url": "https://images.heb.com/is/image/HEBGrocery/001146492-1",
             "nutrition":{
                 "calories": 84,
                 "sugar": 15,
@@ -123,7 +123,7 @@
         {
             "id": 10,
             "name": "chicken nuggets",
-            "image_url": "",
+            "image_url": "https://aileencooks.com/wp-content/uploads/2019/12/air-fryer-frozen-chicken-nuggets-3.jpg",
             "nutrition":{
                 "calories": 180,
                 "sugar": 0,

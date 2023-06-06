@@ -14,6 +14,7 @@ fetch("http://localhost:3000/food")
 
 //initialize
 function init(foodObj){
+    createFood(foodObj)
 }
 
 //renders one menu food item, calls dragDrop -- P
@@ -21,7 +22,16 @@ function renderMenuItem(foodItem){
     //call dragDrop
     //call addNutrition
 }
+function createFood(foodArray) {
+foodArray.forEach((element) => {
+let foodDiv = document.getElementById('food-menu')
+let foodItem = document.createElement('img')
+foodItem.classList.add('foods')
+foodItem.src = element.image_url
+foodDiv.appendChild(foodItem)   
+});
 
+}
 //drag and drop feature -- P
 function dragDrop(foodItemElement){
 }
