@@ -39,6 +39,34 @@ function renderMenuItem(foodItem){
 
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
+    let foodImage = document.createElement('img')
+    foodImage.classList.add('foods')
+    foodImage.src = singleFood.image_url
+    foodDiv.appendChild(foodImage)   
+    addMouseover(foodImage, singleFood)
+}  
+
+function addMouseover(foodImage, singleFood){
+    foodImage.addEventListener('mouseover', (e) => {
+        const mouseoverName = document.getElementById('mouseoverName')
+        const mouseoverCalories = document.getElementById('mouseoverCalories')
+        const mouseoverSugar = document.getElementById('mouseoverSugar')
+        const mouseoverFat = document.getElementById('mouseoverFat')
+        const mouseoverPro = document.getElementById('mouseoverPro')
+        const mouseoverServing = document.getElementById('mouseoverServing')
+
+        mouseoverName.textContent = singleFood.name
+        mouseoverCalories.textContent = singleFood.nutrition.calories
+        mouseoverSugar.textContent = singleFood.nutrition.sugar
+        mouseoverFat.textContent = singleFood.nutrition.fat
+        mouseoverPro.textContent = singleFood.nutrition.protein
+        mouseoverServing.textContent = singleFood.nutrition["serving-size"]
+        
+    })
+}
+//drag and drop feature -- P
+function dragDrop(foodItemElement){
+}
     let foodItem = document.createElement('img')
     foodItem.id = singleFood.name
     foodItem.draggable=true
