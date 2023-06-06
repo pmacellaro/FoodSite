@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Strawberry",
-            "image_url": "",
+            "image_url": "https://vimafoods.com/wp-content/uploads/2020/05/fresas-frescas.jpg",
             "nutrition":{
                 "calories": 32,
                 "sugar": 4.9,
@@ -16,7 +16,8 @@
         {
             "id": 2,
             "name": "French Fries",
-            "image_url": "",
+            "image_url": "https://www.seriouseats.com/thmb/Il7mv9ZSDh7n0cZz3t3V-28ImkQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__2018__04__20180309-french-fries-vicky-wasik-15-5a9844742c2446c7a7be9fbd41b6e27d.jpg",
+            "servings": "100 g",
             "nutrition":{
                 "calories": 196,
                 "sugar": 1.3,
@@ -29,7 +30,8 @@
         {
             "id": 3,
             "name": "Bacon",
-            "image_url": "",
+            "image_url": "https://assets.epicurious.com/photos/630386df4eaa77f49a537aa5/4:3/w_4557,h_3418,c_limit/Brown_Sugar_Bacon_RECIPE_081722_38635.jpg",
+            "servings": "34.5 g",
             "nutrition":{
                 "calories": 161,
                 "sugar": 0,
@@ -42,7 +44,8 @@
         {
             "id": 4,
             "name": "Cheeseburger",
-            "image_url": "",
+            "image_url": "https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-08/double-cheeseburger-recipe-burger-king-copycat-1024x439.jpg",
+            "servings": "130 g",
             "nutrition":{
                 "calories": 350,
                 "sugar": 6,
