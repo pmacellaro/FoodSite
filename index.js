@@ -26,16 +26,11 @@ fetch("http://localhost:3000/food")
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
-    renderNutrition(foodItem)
-    drop()
+    renderNutrition()
+    
 }
 
-//renders one menu food item, calls dragDrop -- P
-function renderMenuItem(foodItem){
 
-    //call dragDrop
-    //call addNutrition
-}
 
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
@@ -56,24 +51,16 @@ function addMouseover(foodImage, singleFood){
         const mouseoverServing = document.getElementById('mouseoverServing')
 
         mouseoverName.textContent = singleFood.name
-        mouseoverCalories.textContent = singleFood.nutrition.calories
-        mouseoverSugar.textContent = singleFood.nutrition.sugar
-        mouseoverFat.textContent = singleFood.nutrition.fat
-        mouseoverPro.textContent = singleFood.nutrition.protein
-        mouseoverServing.textContent = singleFood.nutrition["serving-size"]
+        mouseoverCalories.textContent = `${singleFood.nutrition.calories} Cals`
+        mouseoverSugar.textContent = `${singleFood.nutrition.sugar} g`
+        mouseoverFat.textContent = `${singleFood.nutrition.fat} g`
+        mouseoverPro.textContent = `${singleFood.nutrition.protein} g`
+        mouseoverServing.textContent = `${singleFood.nutrition["serving-size"]} g`
         
     })
 }
 //drag and drop feature -- P
-function dragDrop(foodItemElement){
-}
-    let foodItem = document.createElement('img')
-    foodItem.id = singleFood.name
-    foodItem.draggable=true
-    foodItem.classList.add('foods')
-    foodItem.src = singleFood.image_url
-    foodDiv.appendChild(foodItem)   
-}   
+
 
 
 //nutrition total -- F
@@ -82,10 +69,8 @@ function addNutrition(foodItem){
         nutritionTotal[key] += foodItem.nutrition[key])
     renderNutrition(foodItem)
 }
-//drag and drop feature -- P
-function dragDrop {
 
-}
+
 
 //render nutrition total -- F
 function renderNutrition(foodItem){

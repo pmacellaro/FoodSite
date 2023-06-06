@@ -139,42 +139,42 @@
       "id": 1,
       "name": "hopscotch",
       "cal-req": 170,
-      "image_url": "",
+      "image_url": "https://i.pinimg.com/originals/3b/c0/f9/3bc0f98a0bd2f01fb01ba4040ee1cd11.jpg",
       "description": "hopscotching for half an hour!"
     },
     {
       "id": 2,
       "name": "mascot",
       "cal-req": 270,
-      "image_url": "",
+      "image_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F12%2Fgettyimages-1052806982-2000.jpg&q=60",
       "description": "standing in a mascot costume for one hour!"
     },
     {
       "id": 3,
       "name": "stress ball",
       "cal-req": 450,
-      "image_url": "",
+      "image_url": "https://media.istockphoto.com/id/488913187/photo/businesswoman-squeezing-stress-ball.jpg?s=612x612&w=0&k=20&c=nXHOuGYCddIuJ71tG472U0RB4ENi1_WrIZ151_bAx_8=",
       "description": "squeezing a stress ball three-hundred times!"
     },
     {
       "id": 4,
       "name": "box a bear",
       "cal-req": 1600,
-      "image_url": "",
+      "image_url": "https://im.indiatimes.in/media/content/2016/Jul/normal_rocky_and_bear_1467892610.jpg",
       "description": "boxing a bear for an hour! (survival not guaranteed)"
     },
     {
       "id": 5,
       "name": "marathon",
       "cal-req": 2600,
-      "image_url": "",
+      "image_url": "https://media.istockphoto.com/id/143919656/photo/group-of-runners-in-a-cross-country-race.jpg?s=612x612&w=0&k=20&c=gvW5p2TVibpHuQ4v-UI4gM7Z5Xapyhf5K-vCL1jw_IM=",
       "description": "running a marathon!"
     },
     {
       "id": 6,
       "name": "pogo-stick",
       "cal-req": 3000,
-      "image_url": "",
+      "image_url": "https://media.istockphoto.com/id/108347845/photo/spring-your-business.jpg?s=612x612&w=0&k=20&c=Gfhc6ztcKnn7ePF_FrPp3_1xZwo4YtiJEuV_izfKo3I=",
       "description": "pogo-sticking across the Grand Canyon!"
     },
     {
