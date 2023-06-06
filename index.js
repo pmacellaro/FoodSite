@@ -45,11 +45,20 @@ function createFood(singleFood) {
 }  
 
 function addMouseover(foodImage, singleFood){
-    foodImage.addEventListeners('mouseover', (e) => {
-        let infoDiv = document.createElement('div')
-        let infoUl = document.createElement('ul')
-        let infoLi = document.createElement('li')
+    foodImage.addEventListener('mouseover', (e) => {
+        const mouseoverName = document.getElementById('mouseoverName')
+        const mouseoverCalories = document.getElementById('mouseoverCalories')
+        const mouseoverSugar = document.getElementById('mouseoverSugar')
+        const mouseoverFat = document.getElementById('mouseoverFat')
+        const mouseoverPro = document.getElementById('mouseoverPro')
+        const mouseoverServing = document.getElementById('mouseoverServing')
 
+        mouseoverName.textContent = singleFood.name
+        mouseoverCalories.textContent = singleFood.nutrition.calories
+        mouseoverSugar.textContent = singleFood.nutrition.sugar
+        mouseoverFat.textContent = singleFood.nutrition.fat
+        mouseoverPro.textContent = singleFood.nutrition.protein
+        mouseoverServing.textContent = singleFood.nutrition["serving-size"]
         
     })
 }
