@@ -69,11 +69,31 @@ function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
     let foodImage = document.createElement('img')
     foodImage.classList.add('foods')
+    foodImage.id = singleFood.name
     foodImage.src = singleFood.image_url
     foodDiv.appendChild(foodImage)   
     addMouseover(foodImage, singleFood)
+    addClick(foodImage, singleFood)
 }  
-
+function createFoodImg(singleFood){
+    let foodImage = document.createElement('img')
+    foodImage.classList.add('foods')
+    foodImage.id = singleFood.name
+    foodImage.src = singleFood.image_url
+    return foodImage
+}
+function addClick(foodImage, singleFood){
+    foodImage.addEventListener('click', (e) => {
+    let newImage = createFoodImg(singleFood)
+    let foodDiv = document.getElementById('plate')
+    newImage.id = foodImage.id + 1
+        foodDiv.appendChild(newImage)
+        addNutrition(singleFood)
+        newImage.addEventListener('click', (e) => {
+        foodDiv.removeChild(newImage)
+        })
+    })
+}
 //mouseover for menu item
 function addMouseover(foodImage, singleFood){
     foodImage.addEventListener('mouseover', (e) => {
