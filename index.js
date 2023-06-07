@@ -35,6 +35,14 @@ const achievementDesc = document.getElementById('achievement-description')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let testFoodObj
+//mouseover elements
+let mouseoverdiv = document.getElementById('mouseoverInfo')
+const mouseoverName = document.getElementById('mouseoverName')
+const mouseoverCalories = document.getElementById('mouseoverCalories')
+const mouseoverSugar = document.getElementById('mouseoverSugar')
+const mouseoverFat = document.getElementById('mouseoverFat')
+const mouseoverPro = document.getElementById('mouseoverPro')
+const mouseoverServing = document.getElementById('mouseoverServing')
 
 //fetch and call initialize
 fetch("http://localhost:3000/food")
@@ -47,10 +55,8 @@ fetch("http://localhost:3000/food")
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
-    console.log('hello')
     renderNutrition()
     getNextAchievement()
-    console.log(nextAchievement)
 }
 
 //fetch next achievement
@@ -95,34 +101,26 @@ function addClick(foodImage, singleFood){
     })
 }
 //mouseover for menu item
+
+function addMouseout(foodImage,){
+    foodImage.addEventListener('mouseout', (e) => {
+        mouseoverdiv.style.visibility = "hidden"
+        
+    })
+}
+
 function addMouseover(foodImage, singleFood){
     foodImage.addEventListener('mouseover', (e) => {
-        const mouseoverName = document.getElementById('mouseoverName')
-        const mouseoverCalories = document.getElementById('mouseoverCalories')
-        const mouseoverSugar = document.getElementById('mouseoverSugar')
-        const mouseoverFat = document.getElementById('mouseoverFat')
-        const mouseoverPro = document.getElementById('mouseoverPro')
-        const mouseoverServing = document.getElementById('mouseoverServing')
-
+        mouseoverdiv.style.visibility = "visible"
         mouseoverName.textContent = singleFood.name
         mouseoverCalories.textContent = `${singleFood.nutrition.calories} Cals`
         mouseoverSugar.textContent = `${singleFood.nutrition.sugar} g`
         mouseoverFat.textContent = `${singleFood.nutrition.fat} g`
         mouseoverPro.textContent = `${singleFood.nutrition.protein} g`
-        mouseoverServing.textContent = `${singleFood.nutrition["serving-size"]} g`
-        
+        mouseoverServing.textContent = `${singleFood.nutrition["serving-size"]} g`  
     })
 }
-
-//drag and drop feature -- P
-function dragDrop(foodItemElement){
-    let foodItem = document.createElement('img')
-    foodItem.id = singleFood.name
-    foodItem.draggable=true
-    foodItem.classList.add('foods')
-    foodItem.src = singleFood.image_url
-    foodDiv.appendChild(foodItem)   
-}   
+  
 
 //nutrition total -- F
 function addNutrition(foodItem){

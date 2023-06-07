@@ -1,3 +1,7 @@
+#title {
+    text-align: center;
+}
+
 .foods {
     columns: 2;
     width: 100px;
@@ -7,7 +11,7 @@
     border: 2px solid #000;
     padding: 15px;
     overflow-y: auto;
-    display: flex;
+    
 }
 #plate {
     width: 300px;
@@ -17,3 +21,9 @@
     line-height: 300px;
     margin: 20px auto;
   }
+
+#mouseoverInfo {
+    text-align: center;
+    
+}
+

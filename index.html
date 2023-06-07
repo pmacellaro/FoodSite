@@ -5,14 +5,11 @@
     <link rel="stylesheet" href="food.css">
   </head>
   <body>
-    <div id="plate" ondrop="drop(event)" ondragover="allowDrop(event)">
-      <img src="" alt="">
-    </div>
-    <div id="food-menu">
-    </div>  
-    <div id="mousoverInfo">
+    <h1 id="title">Welcome To Our Site!</h1>
+    <div id="food-menu"></div>
+    <div id="mouseoverInfo" style ="visibility: hidden" >
       <h3 id="mouseoverName">Name</h3>
-      <h3>Calories</h3>
+      <h3 >Calories</h3>
         <p id="mouseoverCalories"></p>
       <h3>Sugar</h3>
         <p id="mouseoverSugar"></p>
@@ -22,7 +19,9 @@
         <p id="mouseoverPro"></p>
       <h3>Serving Size</h3>
         <p id="mouseoverServing"></p>
-      
+    </div>
+    <div id="plate">
+      <img src="" alt="">
     </div>
     <div id="nutrition-total">
       <h3>Total Nutritional Information</h3>
@@ -81,9 +80,7 @@
       <br/>
       <input type="submit"id=submit value="Add Food"> 
     </form>
-      <h1>Welcome to Food Page</h1>
-
-      <p>This is a basic HTML document.</p>
+      
 
     <script defer src="./index.js"></script>
   </body>
