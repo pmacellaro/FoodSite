@@ -8,58 +8,64 @@
     <h1 id="title">Welcome To Our Site!</h1>
     <div id="food-menu"></div>
     <div id="mouseoverInfo" style ="visibility: hidden" >
-      <h3 id="mouseoverName">Name</h3>
-      <h3 >Calories</h3>
+      <h2 id="mouseoverName">Name</h2>
+      <h3 class="h3">Calories</h3>
         <p id="mouseoverCalories"></p>
-      <h3>Sugar</h3>
+      <h3 class = "h3">Sugar</h3>
         <p id="mouseoverSugar"></p>
-      <h3>Fat</h3>
+      <h3 class="h3">Fat</h3>
         <p id="mouseoverFat"></p>
-      <h3>Protein</h3>
+      <h3 class="h3">Protein</h3>
         <p id="mouseoverPro"></p>
-      <h3>Serving Size</h3>
+      <h3 class="h3">Serving Size</h3>
         <p id="mouseoverServing"></p>
     </div>
-    <div id="plate">
-      <img src="" alt="">
+    <div class="container-1">
+      <div id="plate" >
+        <img src="" alt="">
+      </div>
+      <div id="achievement">
+        <h3>Total Nutritional Achievement</h3>
+          <h4 id="calories-until">calories until next achievement!</h4>
+          <img id="achievement-image">
+          <p id="achievement-description"></p>
+      </div>
     </div>
-    <div id="nutrition-total">
-      <h3>Total Nutritional Information</h3>
-      <ul>
+
+    <div class="container-2">
+      <div id="nutrition-total">
+        <h3>Total Nutritional Information</h3>
+        <ul>
         <li id="calories-total">calories total here (cal)</li>
         <li id="sugar-total">sugar total here (g)</li>
         <li id="fat-total">fat total here (g)</li>
         <li id="protein-total">protein total here (g)</li>
         <li id="serving-size-total">serving size total here (g)</li>
-      </ul>
-    </div>
-    <div id="facts">
-      <h3>Total Nutritional Facts</h3>
-        <h5>You have consumed enough energy to...</h5>
-        <ul>
-          <li id="fact-1" style="display:none">[need]</li>
-          <li id="fact-2" style="display:none">[need]</li>
-          <li id="fact-3" style="display:none">[need]</li>
-          <li id="fact-4" style="display:none">[need]</li>
-          <li id="fact-5" style="display:none">[need]</li>
-          <li id="fact-6" style="display:none">[need]</li>
-          <li id="fact-7" style="display:none">[need]</li>
-          <li id="fact-8" style="display:none">[need]</li>
-          <li id="fact-9" style="display:none">[need]</li>
-          <li id="fact-10" style="display:none">[need]</li>
-          <li id="fact-11" style="display:none">[need]</li>
-          <li id="fact-12" style="display:none">[need]</li>
-          <li id="fact-13" style="display:none">[need]</li>
-          <li id="fact-14" style="display:none">[need]</li>
-          <li id="fact-15" style="display:none">[need]</li>
         </ul>
+      </div>
+      <div id="facts">
+        <h3>Total Nutritional Facts</h3>
+          <h5>You have consumed enough energy to...</h5>
+          <ul>
+            <li id="fact-1" style="display:none">[need]</li>
+            <li id="fact-2" style="display:none">[need]</li>
+            <li id="fact-3" style="display:none">[need]</li>
+            <li id="fact-4" style="display:none">[need]</li>
+            <li id="fact-5" style="display:none">[need]</li>
+            <li id="fact-6" style="display:none">[need]</li>
+            <li id="fact-7" style="display:none">[need]</li>
+            <li id="fact-8" style="display:none">[need]</li>
+            <li id="fact-9" style="display:none">[need]</li>
+            <li id="fact-10" style="display:none">[need]</li>
+            <li id="fact-11" style="display:none">[need]</li>
+            <li id="fact-12" style="display:none">[need]</li>
+            <li id="fact-13" style="display:none">[need]</li>
+            <li id="fact-14" style="display:none">[need]</li>
+            <li id="fact-15" style="display:none">[need]</li>
+          </ul>
+      </div>
     </div>
-    <div id="achievement">
-      <h3>Total Nutritional Achievement</h3>
-        <h4 id="calories-until">calories until next achievement!</h4>
-        <img id="achievement-image">
-        <p id="achievement-description"></p>
-    </div>
+    
     <form id="food-form">
       <h3>Add a New Food Item!</h3>
       <input type="text"name="name" placeholder="Enter food name..." class="input-text"/>
