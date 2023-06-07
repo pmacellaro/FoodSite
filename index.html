@@ -3,13 +3,28 @@
   <head>
     <title>Fooooood</title>
     <link rel="stylesheet" href="food.css">
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+      
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+      
+      function drop(ev) {
+        ev.preventDefault();
+        let data = ev.dataTransfer.getData("img");
+        ev.target.appendChild(document.getElementById(data));
+      }
+      </script>
   </head>
   <body>
-    <div id="plate">
+    <div id="plate" ondrop="drop(event)" ondragover="allowDrop(event)">
       <img src="" alt="">
     </div>
     <div id="food-menu">
-    </div>
+    </div>  
     <div id="mousoverInfo">
       <h3 id="mouseoverName">Name</h3>
       <h3>Calories</h3>

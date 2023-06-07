@@ -26,8 +26,8 @@ fetch("http://localhost:3000/food")
 //initialize
 function init(foodObj){
     foodObj.forEach(foodItem => createFood(foodItem))
-    renderNutrition(foodItem)
-    drop()
+    renderNutrition()
+
 }
 
 //renders one menu food item, calls dragDrop -- P
@@ -55,9 +55,7 @@ function addNutrition(foodItem){
     renderNutrition(foodItem)
 }
 //drag and drop feature -- P
-function dragDrop {
 
-}
 
 //render nutrition total -- F
 function renderNutrition(foodItem){
