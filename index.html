@@ -15,7 +15,8 @@
       function drop(ev) {
         ev.preventDefault();
         let data = ev.dataTransfer.getData("img");
-        ev.target.appendChild(document.getElementById(data));
+        console.log(data)
+        ev.target.appendChild(document.getElementById(`${id}`));
       }
       </script>
   </head>
