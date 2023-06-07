@@ -1,16 +1,7 @@
 #title {
     text-align: center;
 }
-#plate.foods {
-    
-    width: 100px;
-    height: 100px;
-    background-color: #eff3ff;;
-    color: white;
-    border: 2px solid #000;
-    padding: 15px;
-    overflow-y: auto;
-}
+
 .foods {
     columns: 2;
     width: 100px;
@@ -23,20 +14,24 @@
 }
 
 #plate {
+    position: relative;
+    background-color: #e4e4e4;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px 2px #000;
+    padding: 30px;
+    margin: 20px;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px;
     grid-template-rows: 50px 50px 50px 50px 50px 50px 50px;
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-    justify-items: stretch;
-    align-items: stretch;
-    width: 408px;
-    height: 421.25px;
-    border: 2px dashed #ccc;
-    bottom: 400px; 
-    right: 1300px;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
+#plate img {
+    position: relative;
+    max-height: 50px;
+    max-width: 50px
+}
 
 #mouseoverInfo {
     text-align: center;
@@ -54,9 +49,6 @@
     justify-content: space-evenly;
 }
 
-#plate{
-    flex: flex-start
-}
 #achievement-image {
     width: 400px;
     height: 300px;
