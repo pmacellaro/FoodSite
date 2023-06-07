@@ -163,12 +163,12 @@ function renderFact(){
     f7.textContent = `pending ${nutritionTotal.calories/5.322}`
     f8.textContent = `cook ${nutritionTotal.calories/43977} eggs`
     f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
-    f10.textContent = `accelerate ${nutritionTotal.calories/131453} ducks to a velocity of 1000 m/s`
+    f10.textContent = `accelerate ${nutritionTotal.calories/131453} duck(s) to a velocity of 1000 m/s`
     f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
     f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
     f13.textContent = `pending ${nutritionTotal.calories/5.322}`
     f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
-    f15.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f15.textContent = `graduate ${nutritionTotal.calories/58320} students from Flatiron SE bootcamp`
 }
 
 //get next fact (reveals next fact)  -- F
