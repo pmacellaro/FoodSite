@@ -206,11 +206,11 @@ foodForm.addEventListener('submit', (e) =>{
         name: e.target.name.value,
         image_url: e.target["image-input"].value,
         nutrition:{
-            calories: e.target.servings.value,
-            sugar: e.target.calories.value,
-            fat: e.target.fat.value,
-            protein: e.target.protein.value,
-            "serving-size": e.target.servings.value
+            calories: Number(e.target.servings.value),
+            sugar: Number(e.target.calories.value),
+            fat: Number(e.target.fat.value),
+            protein: Number(e.target.protein.value),
+            "serving-size": Number(e.target.servings.value)
         },
         nutrition_url: e.target["nutrition_url"].value
     }
@@ -225,6 +225,6 @@ foodForm.addEventListener('submit', (e) =>{
     .then(r => r.json())
     .then( newFood => createFood(newFood))
 
-    
+    foodForm.reset()
     
 })
