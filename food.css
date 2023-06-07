@@ -73,10 +73,9 @@ aside {
 }
 
 #achievement-image {
-    display: flex;
-    width: 408px;
-    height: 420px;
-
+    width: 400px;
+    height: 300px;
+    text-align: center
 }
 .container-2{
     display: flex;
