@@ -79,6 +79,7 @@ function createFood(singleFood) {
     foodImage.src = singleFood.image_url
     foodDiv.appendChild(foodImage)   
     addMouseover(foodImage, singleFood)
+    addMouseout(foodImage)
     addClick(foodImage, singleFood)
 }  
 function createFoodImg(singleFood){
