@@ -29,6 +29,7 @@ const f15 = document.getElementById('fact-15')
 //achievement elements
 let nextAchievementId = 1
 let nextAchievement
+let currentAchievementReq
 const calGoal = document.getElementById('calories-until')
 const achievementImage = document.getElementById('achievement-image')
 const achievementDesc = document.getElementById('achievement-description')
@@ -98,6 +99,7 @@ function addClick(foodImage, singleFood){
         addNutrition(singleFood)
         newImage.addEventListener('click', (e) => {
         foodDiv.removeChild(newImage)
+        removeNutrition(singleFood)
         })
     })
 }
@@ -127,6 +129,15 @@ function addMouseover(foodImage, singleFood){
 function addNutrition(foodItem){
     Object.keys(foodItem.nutrition).forEach((key) => 
         nutritionTotal[key] += foodItem.nutrition[key])
+    renderNutrition()
+    renderAchievement()
+    renderFact()
+}
+
+//decrement when food removed -- F
+function removeNutrition(foodItem){
+    Object.keys(foodItem.nutrition).forEach((key) => 
+        nutritionTotal[key] -= foodItem.nutrition[key])
     renderNutrition()
     renderAchievement()
     renderFact()
@@ -170,6 +181,8 @@ function renderAchievement(){
     //if goalpost is met
     if (nutritionTotal.calories >= nextAchievement['cal-req']){
         //update achievement information box with new achievement
+        currentAchievementReq = nextAchievement['cal-req']
+        achievementImage.style = ''
         achievementImage.src = nextAchievement.image_url
         achievementDesc.textContent = `Enough energy to ${nextAchievement.description}`
         //get next fact and achievement
@@ -178,6 +191,12 @@ function renderAchievement(){
     }
     //update goalpost
     calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
+    //if user removed food 
+    if (nutritionTotal.calories < currentAchievementReq){
+        if (achievementDesc.textContent[0] !== 'N')
+            achievementDesc.textContent = `NOT ` + achievementDesc.textContent
+        achievementImage.style = 'filter: grayscale(100%)'
+    }
 }
 
 //food form -- S
