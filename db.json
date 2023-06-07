@@ -161,14 +161,14 @@
       "name": "cha cha slide",
       "cal-req": 720,
       "image_url": "https://i.pinimg.com/originals/fb/e3/8b/fbe38bbacbaa59021bfb5e248df8d254.jpg",
-      "decription": "dance the cha-cha-slide for 2 hours!"
+      "description": "dance the cha-cha-slide for 2 hours!"
     },
     {
       "id": 5,
       "name": "sleeping",
       "cal-req": "960",
       "image_url": "https://www.bodylogics.co.uk/wp-content/uploads/2021/12/funny-people-sleeping-positions-3-5d760c0f1015e__700.jpg",
-      "decription": "sleep non-stop for 24 hours!"
+      "description": "sleep non-stop for 24 hours!"
     },
     {
       "id": 6,
@@ -195,7 +195,7 @@
       "id": 9,
       "name": "t-rex",
       "cal-req": 5000,
-      "image_url": "https://imgur.com/a/86RptFY",
+      "image_url": "https://i.pinimg.com/736x/87/9c/0c/879c0c73fcbf4c95e9d802b308eb9001.jpg",
       "description": "bench-press a small tyrannosaurus rex! (15 reps)"
     },
     {
