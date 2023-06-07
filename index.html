@@ -3,22 +3,6 @@
   <head>
     <title>Fooooood</title>
     <link rel="stylesheet" href="food.css">
-    <script>
-      function allowDrop(ev) {
-        ev.preventDefault();
-      }
-      
-      function drag(ev) {
-        ev.dataTransfer.setData("text", ev.target.id);
-      }
-      
-      function drop(ev) {
-        ev.preventDefault();
-        let data = ev.dataTransfer.getData("img");
-        console.log(data)
-        ev.target.appendChild(document.getElementById(`Cheeseburger`));
-      }
-      </script>
   </head>
   <body>
     <div id="plate" ondrop="drop(event)" ondragover="allowDrop(event)">
