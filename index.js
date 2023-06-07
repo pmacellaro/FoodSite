@@ -10,6 +10,22 @@ const totalSug = document.getElementById('sugar-total')
 const totalFat = document.getElementById('fat-total')
 const totalPro = document.getElementById('protein-total')
 const totalSS = document.getElementById('serving-size-total')
+//fact elements
+const f1 = document.getElementById('fact-1')
+const f2 = document.getElementById('fact-2')
+const f3 = document.getElementById('fact-3')
+const f4 = document.getElementById('fact-4')
+const f5 = document.getElementById('fact-5')
+const f6 = document.getElementById('fact-6')
+const f7 = document.getElementById('fact-7')
+const f8 = document.getElementById('fact-8')
+const f9 = document.getElementById('fact-9')
+const f10 = document.getElementById('fact-10')
+const f11 = document.getElementById('fact-11')
+const f12 = document.getElementById('fact-12')
+const f13 = document.getElementById('fact-13')
+const f14 = document.getElementById('fact-14')
+const f15 = document.getElementById('fact-15')
 //achievement elements
 let nextAchievementId = 1
 let nextAchievement
@@ -114,6 +130,7 @@ function addNutrition(foodItem){
         nutritionTotal[key] += foodItem.nutrition[key])
     renderNutrition()
     renderAchievement()
+    renderFact()
 }
 
 //render nutrition total -- F
@@ -125,6 +142,29 @@ function renderNutrition(){
     totalSS.textContent = `Serving Amount: ${nutritionTotal["serving-size"]} g`
 }
 
+//render fact -- F
+function renderFact(){
+    f1.textContent = `melt ${nutritionTotal.calories/80} grams of ice at 0C`
+    f2.textContent = `heat ${nutritionTotal.calories/100} grams of water from 0C to 100C`
+    f3.textContent = `vaporize ${nutritionTotal.calories/540} grams of water at 100C`
+    f4.textContent = `raise a 5 lbs brick ${nutritionTotal.calories/5322} meters off the ground`
+    f5.textContent = `push a Honda Civic ${nutritionTotal.calories/303} meters at constant acceleration (1 m/s^2) on a frictionless surface`
+    f6.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f7.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f8.textContent = `cook ${nutritionTotal.calories/43977} eggs`
+    f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
+    f10.textContent = `accelerate ${nutritionTotal.calories/131453} ducks to a velocity of 1000 m/s`
+    f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
+    f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
+    f13.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
+    f15.textContent = `pending ${nutritionTotal.calories/5.322}`
+}
+
+//get next fact (reveals next fact)  -- F
+function getNextFact(){
+    document.getElementById(`fact-${nextAchievementId-1}`).style = ''
+}
 
 //render achievement -- F
 function renderAchievement(){
@@ -132,8 +172,9 @@ function renderAchievement(){
     if (nutritionTotal.calories >= nextAchievement['cal-req']){
         //update achievement information box with new achievement
         achievementImage.src = nextAchievement.image_url
-        achievementDesc.textContent = nextAchievement.description
-        //get next achievement
+        achievementDesc.textContent = `Enough energy to ${nextAchievement.description}`
+        //get next fact and achievement
+        getNextFact()
         getNextAchievement()
     }
     //update goalpost
