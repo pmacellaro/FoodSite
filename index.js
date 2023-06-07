@@ -129,16 +129,16 @@ function renderFact(){
     f3.textContent = `vaporize ${nutritionTotal.calories/540} grams of water at 100C`
     f4.textContent = `raise a 5 lbs brick ${nutritionTotal.calories/5322} meters off the ground`
     f5.textContent = `push a Honda Civic ${nutritionTotal.calories/303} meters at constant acceleration (1 m/s^2) on a frictionless surface`
-    f6.textContent = `asdf ${nutritionTotal.calories/5.322}`
-    f7.textContent = `asdf ${nutritionTotal.calories/5.322}`
+    f6.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f7.textContent = `pending ${nutritionTotal.calories/5.322}`
     f8.textContent = `cook ${nutritionTotal.calories/43977} eggs`
     f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
-    f10.textContent = `asdf ${nutritionTotal.calories/5.322}`
-    f11.textContent = `equivalent energy conctent of ${nutritionTotal.calories/28746746} gallons of gasoline`
-    f12.textContent = `asdf ${nutritionTotal.calories/5.322}`
-    f13.textContent = `asdf ${nutritionTotal.calories/5.322}`
+    f10.textContent = `accelerate ${nutritionTotal.calories/131453} ducks to a velocity of 1000 m/s`
+    f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
+    f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
+    f13.textContent = `pending ${nutritionTotal.calories/5.322}`
     f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
-    f15.textContent = `asdf ${nutritionTotal.calories/5.322}`
+    f15.textContent = `pending ${nutritionTotal.calories/5.322}`
 }
 
 //get next fact (reveals next fact)  -- F
