@@ -159,16 +159,16 @@ function renderFact(){
     f3.textContent = `vaporize ${nutritionTotal.calories/540} grams of water at 100C`
     f4.textContent = `raise a 5 lbs brick ${nutritionTotal.calories/5322} meters off the ground`
     f5.textContent = `push a Honda Civic ${nutritionTotal.calories/303} meters at constant acceleration (1 m/s^2) on a frictionless surface`
-    f6.textContent = `pending ${nutritionTotal.calories/5.322}`
-    f7.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f6.textContent = `equivalent calorie content of ${nutritionTotal.calories/190} krispy kreme donuts`
+    f7.textContent = `power New York City for ${nutritionTotal.calories/3378656000000} seconds`
     f8.textContent = `cook ${nutritionTotal.calories/43977} eggs`
     f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
-    f10.textContent = `accelerate ${nutritionTotal.calories/131453} ducks to a velocity of 1000 m/s`
+    f10.textContent = `accelerate ${nutritionTotal.calories/131453} duck(s) to a velocity of 1000 m/s`
     f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
     f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
-    f13.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f13.textContent = `live for ${nutritionTotal.calories/2400} days (assuming calorie intake of an 18-year-old)`
     f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
-    f15.textContent = `pending ${nutritionTotal.calories/5.322}`
+    f15.textContent = `graduate ${nutritionTotal.calories/58320} students from Flatiron SE bootcamp`
 }
 
 //get next fact (reveals next fact)  -- F
@@ -196,6 +196,11 @@ function renderAchievement(){
         if (achievementDesc.textContent[0] !== 'N')
             achievementDesc.textContent = `NOT ` + achievementDesc.textContent
         achievementImage.style = 'filter: grayscale(100%)'
+    }
+    //if user added food again after falling behind current achievement
+    if((nutritionTotal.calories > currentAchievementReq) && (achievementDesc.textContent[0] === 'N')){
+        achievementDesc.textContent = (achievementDesc.textContent).substring(4)
+        achievementImage.style = ''
     }
 }
 
