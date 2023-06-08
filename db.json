@@ -122,7 +122,7 @@
     },
     {
       "id": 10,
-      "name": "Chicken Nuggaroos (Dinosaur Obviously)",
+      "name": "Chicken Nuggaroos",
       "image_url": "https://aileencooks.com/wp-content/uploads/2019/12/air-fryer-frozen-chicken-nuggets-3.jpg",
       "nutrition": {
         "calories": 180,
@@ -217,21 +217,21 @@
       "name": "crying",
       "cal-req": 26200,
       "image_url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Michael_Jordan_crying.jpg",
-      "description": "cry for two weeks straight!"
+      "description": "Cry for Two Weeks Straight!"
     },
     {
       "id": 13,
       "name": "mow all of central park",
       "cal-req": 44405,
       "image_url": "https://media.istockphoto.com/id/182825693/photo/screaming-gardener-man-pushing-a-red-lawn-mower.jpg?s=612x612&w=0&k=20&c=r6ZHnJ-l6f5q5CmRn3QL7_e4ytG2fgD1TaDK8eCXyBg=",
-      "description": "push a lawn mower over all of Central Park!"
+      "description": "Push a Lawn Mower over all of Central Park!"
     },
     {
       "id": 14,
       "name": "graduating flatiron",
       "cal-req": 58320,
       "image_url": "https://thumbs.dreamstime.com/b/frustrated-computer-1446513.jpg",
-      "description": "graduate Flatiron School's Live Software Engineering Bootcamp!"
+      "description": "Graduate Flatiron School's Live Software Engineering Bootcamp!"
     },
     {
       "id": 15,

@@ -40,7 +40,8 @@
     height: fit-content;
     text-align: center;
     font-size: 10px;
-    line-height: 1px
+    line-height: 1px;
+    border-spacing: 1px;
 }
 
 .h3 {
