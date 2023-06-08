@@ -14,6 +14,27 @@
     overflow-y: auto;
 }
 
+#rate-my-meal{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #d90429;
+    background: #d90429;
+}
+
+#rate-my-meal:hover {
+    background: #fff;
+    color: #d90429
+}
+
 #plate {
     position: relative;
     background-color: #e4e4e4;

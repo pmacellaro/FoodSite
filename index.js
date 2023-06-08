@@ -49,13 +49,30 @@ const mouseoverPro = document.getElementById('mouseoverPro')
 const mouseoverServing = document.getElementById('mouseoverServing')
 //rate button
 const rateButton = document.getElementById('rate-my-meal')
-function rateMeal(randomNum, nutritionTotal, plateTotal){
-    if (randomNum < 3)
-        alert(`Keep eating!`)
-    if ((randomNum >= 3) && (randomNum < 7))
-        alert(`More french fries!`)
-    if (randomNum >= 7)
-        alert(`Yum yum!`)
+//set mealCritic values at indices 0,2,4,6,8
+const mealCritic = [
+    `Keep eating!`,,
+    `More french fries!`,,
+    `Can we get a little more asparagus in here?`,,
+    `Ice cream sounds amazing right now ;) https://www.verywellfit.com/chocolate-ice-cream-nutrition-facts-and-health-benefits-5206300`,,
+    `Almost there!`,,
+]
+function rateMeal(randomNum){
+    alert(mealCritic[randomNum])
+    // if (randomNum < 3)
+    //     alert(`Keep eating!`)
+    // if ((randomNum >= 3) && (randomNum < 7))
+    //     alert(`More french fries!`)
+    // if (randomNum >= 7)
+    //     alert(`Yum yum!`)
+}
+
+function updateMealCritic(){
+    mealCritic[1] = `Only ${plateTotal[6]} ${foodObj[6].name}'s?`
+    mealCritic[3] = `You've eaten the same fat content as ${nutritionTotal.fat/96} sticks of butter!`
+    mealCritic[5] = `You've eaten the same susgar content as ${nutritionTotal.salt/15} oreos!`
+    mealCritic[7] = `You've eaten the same protein content as ${nutritionTotal.protein/57788} cows!`
+    mealCritic[9] = `You've eaten ${nutritionTotal.servings/1000000} metric tonnes of food!`
 }
 
 //fetch and call initialize
@@ -135,8 +152,8 @@ function addClick(foodImage, singleFood){
         foodDiv.appendChild(newImage)
         addNutrition(singleFood)
         newImage.addEventListener('click', (e) => {
-        foodDiv.removeChild(newImage)
-        removeNutrition(singleFood)
+            foodDiv.removeChild(newImage)
+            removeNutrition(singleFood)
         })
     })
 }
@@ -167,6 +184,7 @@ function addNutrition(foodItem){
     renderNutrition()
     renderAchievement()
     renderFact()
+    updateMealCritic()
 }
 
 //decrement when food removed -- F
@@ -176,6 +194,7 @@ function removeNutrition(foodItem){
     renderNutrition()
     renderAchievement()
     renderFact()
+    updateMealCritic()
 }
 
 //render nutrition total -- F
