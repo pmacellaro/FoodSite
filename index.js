@@ -35,7 +35,8 @@ const achievementImage = document.getElementById('achievement-image')
 const achievementDesc = document.getElementById('achievement-description')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
-let testFoodObj
+let plateTotal = {}
+let localFoodObj
 //mouseover elements
 let mouseoverdiv = document.getElementById('mouseoverInfo')
 const mouseoverName = document.getElementById('mouseoverName')
@@ -48,14 +49,17 @@ const mouseoverServing = document.getElementById('mouseoverServing')
 //fetch and call initialize
 fetch("http://localhost:3000/food")
     .then((r) => r.json())
-    .then((foodObj) => {
-        init(foodObj)
-        testFoodObj = foodObj
+    .then((serverFoodObj) => {
+        init(serverFoodObj)
+        localFoodObj = serverFoodObj
     })
 
 //initialize
 function init(foodObj){
-    foodObj.forEach(foodItem => createFood(foodItem))
+    foodObj.forEach(foodItem => {
+        createFood(foodItem)
+        plateTotal[`${foodItem.id}`] = 0
+    })
     renderNutrition()
     getNextAchievement()
 }
@@ -71,7 +75,7 @@ function getNextAchievement(){
     nextAchievementId++
 }
 
-//renders one menu food item, calls dragDrop and addMouseover -- P
+//renders one menu food item --P
 function createFood(singleFood) {
     let foodDiv = document.getElementById('food-menu')
     let foodImage = document.createElement('img')
@@ -83,6 +87,8 @@ function createFood(singleFood) {
     addMouseout(foodImage)
     addClick(foodImage, singleFood)
 }  
+
+//render food images on menu
 function createFoodImg(singleFood){
     let foodImage = document.createElement('img')
     foodImage.classList.add('foods')
@@ -90,6 +96,8 @@ function createFoodImg(singleFood){
     foodImage.src = singleFood.image_url
     return foodImage
 }
+
+//click functionality for menu and plate
 function addClick(foodImage, singleFood){
     foodImage.addEventListener('click', (e) => {
     let newImage = createFoodImg(singleFood)
@@ -103,8 +111,8 @@ function addClick(foodImage, singleFood){
         })
     })
 }
-//mouseover for menu item
 
+//mouseout for menu item
 function addMouseout(foodImage,){
     foodImage.addEventListener('mouseout', (e) => {
         mouseoverdiv.style.visibility = "hidden"
@@ -112,6 +120,7 @@ function addMouseout(foodImage,){
     })
 }
 
+//mouseover for menu item
 function addMouseover(foodImage, singleFood){
     foodImage.addEventListener('mouseover', (e) => {
         mouseoverdiv.style.visibility = "visible"
@@ -123,12 +132,12 @@ function addMouseover(foodImage, singleFood){
         mouseoverServing.textContent = `${singleFood.nutrition["serving-size"]} g`  
     })
 }
-  
 
 //nutrition total -- F
 function addNutrition(foodItem){
     Object.keys(foodItem.nutrition).forEach((key) => 
         nutritionTotal[key] += foodItem.nutrition[key])
+    plateTotal[`${foodItem.id}`]++
     renderNutrition()
     renderAchievement()
     renderFact()
@@ -160,14 +169,14 @@ function renderFact(){
     f4.textContent = `raise a 5 lbs brick ${(nutritionTotal.calories/5322).toFixed(2)} meters off the ground`
     f5.textContent = `push a Honda Civic ${(nutritionTotal.calories/303).toFixed(2)} meters at constant acceleration (1 m/s^2) on a frictionless surface`
     f6.textContent = `equivalent calorie content of ${(nutritionTotal.calories/190).toFixed(2)} krispy kreme donuts`
-    f7.textContent = `power New York City for ${(nutritionTotal.calories/3378656000000)} seconds`
+    f7.textContent = `power New York City for ${(nutritionTotal.calories/3378656000000).toExponential(2)} seconds`
     f8.textContent = `cook ${(nutritionTotal.calories/43977).toFixed(2)} eggs`
-    f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
-    f10.textContent = `accelerate ${nutritionTotal.calories/131453} duck(s) to a velocity of 1000 m/s`
-    f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
-    f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
+    f9.textContent = `generate ${(nutritionTotal.calories/641186.49).toFixed(3)} horsepower (assuming all food consumed in 1 hour)`
+    f10.textContent = `accelerate ${(nutritionTotal.calories/131453).toFixed(2)} duck(s) to a velocity of 1000 m/s`
+    f11.textContent = `equivalent energy content of ${(nutritionTotal.calories/28746746).toExponential(2)} gallons of gasoline`
+    f12.textContent = `cook ${(nutritionTotal.calories/110000).toFixed(2)} chickens`
     f13.textContent = `live for ${(nutritionTotal.calories/2400).toFixed(2)} days (assuming calorie intake of an 18-year-old)`
-    f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
+    f14.textContent = `rotate the Earth by ${(nutritionTotal.calories/1670000000000000000000000000000).toExponential(2)} degrees at its ordinary rotational velocity`
     f15.textContent = `graduate ${(nutritionTotal.calories/58320).toFixed(2)} students from Flatiron SE bootcamp`
 }
 
@@ -229,7 +238,5 @@ foodForm.addEventListener('submit', (e) =>{
     fetch("http://localhost:3000/food", postNewFood)
     .then(r => r.json())
     .then( newFood => createFood(newFood))
-
     foodForm.reset()
-    
 })
