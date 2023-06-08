@@ -70,9 +70,9 @@ function rateMeal(randomNum){
 function updateMealCritic(){
     mealCritic[1] = `Only ${plateTotal[6]} ${foodObj[6].name}'s?`
     mealCritic[3] = `You've eaten the same fat content as ${nutritionTotal.fat/96} sticks of butter!`
-    mealCritic[5] = `You've eaten the same susgar content as ${nutritionTotal.salt/15} oreos!`
+    mealCritic[5] = `You've eaten the same sugar content as ${nutritionTotal.sugar/15} oreos!`
     mealCritic[7] = `You've eaten the same protein content as ${nutritionTotal.protein/57788} cows!`
-    mealCritic[9] = `You've eaten ${nutritionTotal.servings/1000000} metric tonnes of food!`
+    mealCritic[9] = `You've eaten ${nutritionTotal["serving-size"]/1000000} metric tonnes of food!`
 }
 
 //fetch and call initialize
