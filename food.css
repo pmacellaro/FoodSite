@@ -27,6 +27,7 @@
     grid-row-gap: 1px;
     overflow-y: scroll;
   }
+  
 #plate img {
     position: relative;
     max-height: 50px;
