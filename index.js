@@ -27,16 +27,18 @@ const f13 = document.getElementById('fact-13')
 const f14 = document.getElementById('fact-14')
 const f15 = document.getElementById('fact-15')
 //achievement elements
-let nextAchievementId = 1
+let achievementObj
+let currentAchievementId = 0
 let nextAchievement
-let currentAchievementReq
+let currentAchievement
+let previousAchievement
 const calGoal = document.getElementById('calories-until')
 const achievementImage = document.getElementById('achievement-image')
 const achievementDesc = document.getElementById('achievement-description')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let plateTotal = {}
-let localFoodObj
+let foodObj
 //mouseover elements
 let mouseoverdiv = document.getElementById('mouseoverInfo')
 const mouseoverName = document.getElementById('mouseoverName')
@@ -45,14 +47,22 @@ const mouseoverSugar = document.getElementById('mouseoverSugar')
 const mouseoverFat = document.getElementById('mouseoverFat')
 const mouseoverPro = document.getElementById('mouseoverPro')
 const mouseoverServing = document.getElementById('mouseoverServing')
+//rate button
+const rateButton = document.getElementById('rate-my-meal')
 
 //fetch and call initialize
-fetch("http://localhost:3000/food")
+fetch("http://localhost:3000/achievements")
     .then((r) => r.json())
-    .then((serverFoodObj) => {
+    .then((serverAchievementObj) => {
+        achievementObj = serverAchievementObj
+        fetch("http://localhost:3000/food")
+            .then((r) => r.json())
+            .then((serverFoodObj) => {
         init(serverFoodObj)
-        localFoodObj = serverFoodObj
+        foodObj = serverFoodObj
+        })
     })
+
 
 //initialize
 function init(foodObj){
@@ -61,18 +71,29 @@ function init(foodObj){
         plateTotal[`${foodItem.id}`] = 0
     })
     renderNutrition()
-    getNextAchievement()
+    getNextAchievement(currentAchievementId)
 }
 
 //fetch next achievement
-function getNextAchievement(){
-    fetch(`http://localhost:3000/achievements/${nextAchievementId}`)
-        .then((r) => r.json())
-        .then((achievementObj) => {
-            nextAchievement = achievementObj
-            renderAchievement()
-        })
-    nextAchievementId++
+function getNextAchievement(achievementId){
+    //get current achievement
+    if (achievementId === 0){
+        currentAchievement = {'cal-req': 0}
+        achievementImage.src = ''
+        achievementDesc.textContent = ''
+        nextAchievement = achievementObj[achievementId]
+    }
+    else if (achievementId === 1){
+        previousAchievement = {'cal-req': 0}
+        currentAchievement = achievementObj[achievementId-1]
+        nextAchievement = achievementObj[achievementId]
+    }
+    else {
+        currentAchievement = achievementObj[achievementId-1]
+        nextAchievement = achievementObj[achievementId]
+        previousAchievement = achievementObj[achievementId-2]
+    }
+    renderAchievement()
 }
 
 //renders one menu food item --P
@@ -114,10 +135,7 @@ function addClick(foodImage, singleFood){
 
 //mouseout for menu item
 function addMouseout(foodImage,){
-    foodImage.addEventListener('mouseout', (e) => {
-        mouseoverdiv.style.visibility = "hidden"
-        
-    })
+    foodImage.addEventListener('mouseout', (e) => mouseoverdiv.style.visibility = "hidden")
 }
 
 //mouseover for menu item
@@ -182,35 +200,35 @@ function renderFact(){
 
 //get next fact (reveals next fact)  -- F
 function getNextFact(){
-    document.getElementById(`fact-${nextAchievementId-1}`).style = ''
+    if (currentAchievementId === 0)
+        document.getElementById(`fact-1`).style = 'display: none'
+    document.getElementById(`fact-${currentAchievementId}`).style = ''
+    document.getElementById(`fact-${currentAchievementId+1}`).style = 'display: none'
 }
 
 //render achievement -- F
 function renderAchievement(){
-    //if goalpost is met
     if (nutritionTotal.calories >= nextAchievement['cal-req']){
         //update achievement information box with new achievement
-        currentAchievementReq = nextAchievement['cal-req']
-        achievementImage.style = ''
         achievementImage.src = nextAchievement.image_url
         achievementDesc.textContent = `Enough energy to ${nextAchievement.description}`
-        //get next fact and achievement
+        //update achievement objects
+        currentAchievementId++
+        getNextAchievement(currentAchievementId)
         getNextFact()
-        getNextAchievement()
+    }
+    //if user removed food 
+    if (nutritionTotal.calories < currentAchievement['cal-req']){
+        //update achievement information box with old achievement
+        achievementImage.src = previousAchievement.image_url,
+        achievementDesc.textContent = `Enough energy to ${previousAchievement.description}`
+        currentAchievementId--
+        getNextAchievement(currentAchievementId)
+        getNextFact()
+
     }
     //update goalpost
     calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
-    //if user removed food 
-    if (nutritionTotal.calories < currentAchievementReq){
-        if (achievementDesc.textContent[0] !== 'N')
-            achievementDesc.textContent = `NOT ` + achievementDesc.textContent
-        achievementImage.style = 'filter: grayscale(100%)'
-    }
-    //if user added food again after falling behind current achievement
-    if((nutritionTotal.calories > currentAchievementReq) && (achievementDesc.textContent[0] === 'N')){
-        achievementDesc.textContent = (achievementDesc.textContent).substring(4)
-        achievementImage.style = ''
-    }
 }
 
 //food form -- S
