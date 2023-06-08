@@ -99,7 +99,7 @@ function getNextAchievement(achievementId){
     if (achievementId === 0){
         currentAchievement = {'cal-req': 0}
         achievementImage.src = 'https://i.pinimg.com/564x/a0/41/cd/a041cd2d84513f925b1344978d737d8e.jpg'
-        achievementDesc.textContent = ''
+        achievementDesc.textContent = 'Add Food to Begin!'
         nextAchievement = achievementObj[achievementId]
     }
     else if (achievementId === 1){
