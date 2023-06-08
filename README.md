@@ -1,4 +1,4 @@
-# FoodSite
+# Calorosity
 A tool for learning about nutritional information about various food items as related to assorted science facts and fun achievements. The dieting website nobody asked for!
 
 User Experience:
