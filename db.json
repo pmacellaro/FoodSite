@@ -140,105 +140,105 @@
       "name": "hopscotch",
       "cal-req": 170,
       "image_url": "https://www.horizoneducationcenters.org/hubfs/images/hopscotch.jpg?t=1534168068025#keepProtocol",
-      "description": "Hopscotch for Half an Hour!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Hopscotch for Half an Hour!"
     },
     {
       "id": 2,
       "name": "mascot",
       "cal-req": 270,
       "image_url": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2018%2F12%2Fgettyimages-1052806982-2000.jpg&q=60",
-      "description": "Stand in a Mascot Costume for One Hour!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Stand in a Mascot Costume for One Hour!"
     },
     {
       "id": 3,
       "name": "stress ball",
       "cal-req": 450,
       "image_url": "https://media.istockphoto.com/id/488913187/photo/businesswoman-squeezing-stress-ball.jpg?s=612x612&w=0&k=20&c=nXHOuGYCddIuJ71tG472U0RB4ENi1_WrIZ151_bAx_8=",
-      "description": "Squeeze a Stress Ball Three-Hundred Times!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Squeeze a Stress Ball Three-Hundred Times!"
     },
     {
       "id": 4,
       "name": "cha cha slide",
       "cal-req": 720,
       "image_url": "https://i.pinimg.com/originals/fb/e3/8b/fbe38bbacbaa59021bfb5e248df8d254.jpg",
-      "description": "Dance the Cha-Cha-Slide for 2 Hours!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Dance the Cha-Cha-Slide for 2 Hours!"
     },
     {
       "id": 5,
       "name": "sleeping",
       "cal-req": "960",
       "image_url": "https://www.bodylogics.co.uk/wp-content/uploads/2021/12/funny-people-sleeping-positions-3-5d760c0f1015e__700.jpg",
-      "description": "Sleep Non-Stop for 24 Hours!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Sleep Non-Stop for 24 Hours!"
     },
     {
       "id": 6,
       "name": "box a bear",
       "cal-req": 1600,
       "image_url": "https://im.indiatimes.in/media/content/2016/Jul/normal_rocky_and_bear_1467892610.jpg",
-      "description": "Box a Bear for an Hour! (survival not guaranteed)"
+      "description": "Achievement Unlocked! You Have Enough Energy to Box a Bear for an Hour! (survival not guaranteed)"
     },
     {
       "id": 7,
       "name": "marathon",
       "cal-req": 2600,
       "image_url": "https://media.istockphoto.com/id/143919656/photo/group-of-runners-in-a-cross-country-race.jpg?s=612x612&w=0&k=20&c=gvW5p2TVibpHuQ4v-UI4gM7Z5Xapyhf5K-vCL1jw_IM=",
-      "description": "Run a Marathon!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Run a Marathon!"
     },
     {
       "id": 8,
       "name": "pogo-stick",
       "cal-req": 3000,
       "image_url": "https://media.istockphoto.com/id/108347845/photo/spring-your-business.jpg?s=612x612&w=0&k=20&c=Gfhc6ztcKnn7ePF_FrPp3_1xZwo4YtiJEuV_izfKo3I=",
-      "description": "Pogo-Stick Across the Grand Canyon!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Pogo-Stick Across the Grand Canyon!"
     },
     {
       "id": 9,
       "name": "t-rex",
       "cal-req": 5000,
       "image_url": "https://i.pinimg.com/736x/87/9c/0c/879c0c73fcbf4c95e9d802b308eb9001.jpg",
-      "description": "bench-press a small tyrannosaurus rex! (15 reps)"
+      "description": "Achievement Unlocked! You Have Enough Energy to Bench-Press a Small Tyrannosaurus Rex! (15 reps)"
     },
     {
       "id": 10,
       "name": "the office watching",
       "cal-req": 8080,
       "image_url": "https://www.looper.com/img/gallery/the-office-funniest-moments-ranked/tobys-return-from-costa-rica-1627594561.jpg",
-      "description": "Watch every Episode of every Season of The Office!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Watch every Episode of every Season of The Office!"
     },
     {
       "id": 11,
       "name": "hot dog eating",
       "cal-req": 15000,
       "image_url": "https://www.commercialappeal.com/gcdn/presto/2022/06/30/PMCA/a4a67d73-146f-40f7-bcee-7a83d5c74367-06272022_zm_hotdog-eater003.jpg",
-      "description": "Fully Digest 1500 Hot Dogs! (does not include chewing and swallowing)"
+      "description": "Achievement Unlocked! You Have Enough Energy to Fully Digest 1500 Hot Dogs! (does not include chewing and swallowing)"
     },
     {
       "id": 12,
       "name": "crying",
       "cal-req": 26200,
       "image_url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Michael_Jordan_crying.jpg",
-      "description": "cry for two weeks straight!"
+      "description": "Achievement Unlocked! You Have Enough Energy to cry for two weeks straight!"
     },
     {
       "id": 13,
       "name": "mow all of central park",
       "cal-req": 44405,
       "image_url": "https://media.istockphoto.com/id/182825693/photo/screaming-gardener-man-pushing-a-red-lawn-mower.jpg?s=612x612&w=0&k=20&c=r6ZHnJ-l6f5q5CmRn3QL7_e4ytG2fgD1TaDK8eCXyBg=",
-      "description": "push a lawn mower over all of Central Park!"
+      "description": "Achievement Unlocked! You Have Enough Energy to push a lawn mower over all of Central Park!"
     },
     {
       "id": 14,
       "name": "graduating flatiron",
       "cal-req": 58320,
       "image_url": "https://thumbs.dreamstime.com/b/frustrated-computer-1446513.jpg",
-      "description": "graduate Flatiron School's Live Software Engineering Bootcamp!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Graduate Flatiron School's Live Software Engineering Bootcamp!"
     },
     {
       "id": 15,
       "name": "procrastinating",
       "cal-req": 166785,
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLdbREjV3IfL4WIF4JOu_cs9necc4Ws3oFeg&usqp=CAU",
-      "description": "procrastinate Flatiron course-work by completing ALL previous milestones, then graduating from Flatiron"
+      "description": "Achievement Unlocked! You Have Enough Energy to procrastinate Flatiron course-work by completing ALL previous milestones, then graduating from Flatiron"
     }
   ]
 }
