@@ -11,6 +11,7 @@ Features:
         Submit food form to add food item to menu (POST working)
         Mouseover food items to view nutritional information
             Mouseout hides nutritional information
+        Click rate-my-meal button for rating alerts about the plate
     Auto-updating Lists:
         Science facts, unlocked based on total nutritional values of plate
         Achievement goalposts for total calories of plate 
@@ -20,7 +21,6 @@ Features:
 
 Would-like:
     Drag and drop (js - stretch)
-    Rate the meal button (js - listener)
     mouseover/mouseout styled as nutritional box (css)
 
 Next-steps:
@@ -28,6 +28,7 @@ Next-steps:
     Food form remodeled as food selector from db.json library (game)
     Persisting: plate, facts, achievements (restructuring db.json)
     Facts not hard-coded into index.js (restructuring db.json)
+    Meal-rater not hard-coded into index.js (restructuring db.json)
     
 Thank you for viewing our project. 
 
