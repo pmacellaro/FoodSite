@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+html {
+    background-color: #f7f7f7;
+    opacity: 0.9;
+    background-image: radial-gradient(#dd4150 0.8500000000000001px, #f7f7f7 0.8500000000000001px);
+    background-size: 17px 17px;
+}
+
 .foods {
     columns: 2;
     width: 100px;
@@ -85,7 +92,8 @@
 #achievement-image {
     width: 400px;
     height: 300px;
-    text-align: center
+    text-align: center;
+    border-style: inset;
 }
 .container-2{
     display: flex;
