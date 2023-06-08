@@ -49,6 +49,14 @@ const mouseoverPro = document.getElementById('mouseoverPro')
 const mouseoverServing = document.getElementById('mouseoverServing')
 //rate button
 const rateButton = document.getElementById('rate-my-meal')
+function rateMeal(randomNum, nutritionTotal, plateTotal){
+    if (randomNum < 3)
+        alert(`Keep eating!`)
+    if ((randomNum >= 3) && (randomNum < 7))
+        alert(`More french fries!`)
+    if (randomNum >= 7)
+        alert(`Yum yum!`)
+}
 
 //fetch and call initialize
 fetch("http://localhost:3000/achievements")
@@ -79,7 +87,7 @@ function getNextAchievement(achievementId){
     //get current achievement
     if (achievementId === 0){
         currentAchievement = {'cal-req': 0}
-        achievementImage.src = ''
+        achievementImage.src = 'https://i.pinimg.com/564x/a0/41/cd/a041cd2d84513f925b1344978d737d8e.jpg'
         achievementDesc.textContent = ''
         nextAchievement = achievementObj[achievementId]
     }
@@ -225,11 +233,18 @@ function renderAchievement(){
         currentAchievementId--
         getNextAchievement(currentAchievementId)
         getNextFact()
-
     }
     //update goalpost
     calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
 }
+
+//rate-my-meal button
+rateButton.addEventListener('click',(e) =>{
+    //random number between 0-9 based on total calories
+    let randomNum = (nutritionTotal.calories)%10
+    //call rateMeal
+    rateMeal(randomNum, nutritionTotal, plateTotal)
+})
 
 //food form -- S
 foodForm.addEventListener('submit', (e) =>{
