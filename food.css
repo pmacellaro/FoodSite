@@ -12,6 +12,7 @@
     border: 2px solid #000;
     padding: 15px;
     overflow-y: auto;
+    border-radius: 50%
 }
 
 #plate {
