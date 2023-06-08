@@ -145,30 +145,30 @@ function removeNutrition(foodItem){
 
 //render nutrition total -- F
 function renderNutrition(){
-    totalCal.textContent = `Calories: ${nutritionTotal.calories} cal`
-    totalSug.textContent = `Sugar: ${nutritionTotal.sugar} g`
-    totalFat.textContent = `Fat: ${nutritionTotal.fat} g`
-    totalPro.textContent = `Protein: ${nutritionTotal.protein} g`
-    totalSS.textContent = `Serving Amount: ${nutritionTotal["serving-size"]} g`
+    totalCal.textContent = `Calories: ${Math.round(nutritionTotal.calories* 100)/100} cal`
+    totalSug.textContent = `Sugar: ${Math.round(nutritionTotal.sugar * 100)/100} g`
+    totalFat.textContent = `Fat: ${Math.round(nutritionTotal.fat * 100)/100} g`
+    totalPro.textContent = `Protein: ${Math.round(nutritionTotal.protein * 100)/100} g`
+    totalSS.textContent = `Serving Amount: ${Math.round(nutritionTotal["serving-size"] * 100)/100} g`
 }
 
 //render fact -- F
 function renderFact(){
-    f1.textContent = `melt ${nutritionTotal.calories/80} grams of ice at 0C`
-    f2.textContent = `heat ${nutritionTotal.calories/100} grams of water from 0C to 100C`
-    f3.textContent = `vaporize ${nutritionTotal.calories/540} grams of water at 100C`
-    f4.textContent = `raise a 5 lbs brick ${nutritionTotal.calories/5322} meters off the ground`
-    f5.textContent = `push a Honda Civic ${nutritionTotal.calories/303} meters at constant acceleration (1 m/s^2) on a frictionless surface`
-    f6.textContent = `equivalent calorie content of ${nutritionTotal.calories/190} krispy kreme donuts`
-    f7.textContent = `power New York City for ${nutritionTotal.calories/3378656000000} seconds`
-    f8.textContent = `cook ${nutritionTotal.calories/43977} eggs`
+    f1.textContent = `melt ${(nutritionTotal.calories/80).toFixed(2)} grams of ice at 0C`
+    f2.textContent = `heat ${(nutritionTotal.calories/100).toFixed(2)} grams of water from 0C to 100C`
+    f3.textContent = `vaporize ${(nutritionTotal.calories/540).toFixed(2)} grams of water at 100C`
+    f4.textContent = `raise a 5 lbs brick ${(nutritionTotal.calories/5322).toFixed(2)} meters off the ground`
+    f5.textContent = `push a Honda Civic ${(nutritionTotal.calories/303).toFixed(2)} meters at constant acceleration (1 m/s^2) on a frictionless surface`
+    f6.textContent = `equivalent calorie content of ${(nutritionTotal.calories/190).toFixed(2)} krispy kreme donuts`
+    f7.textContent = `power New York City for ${(nutritionTotal.calories/3378656000000)} seconds`
+    f8.textContent = `cook ${(nutritionTotal.calories/43977).toFixed(2)} eggs`
     f9.textContent = `generate ${nutritionTotal.calories/641186.49} horsepower (assuming all food consumed in 1 hour)`
     f10.textContent = `accelerate ${nutritionTotal.calories/131453} duck(s) to a velocity of 1000 m/s`
     f11.textContent = `equivalent energy content of ${nutritionTotal.calories/28746746} gallons of gasoline`
     f12.textContent = `cook ${nutritionTotal.calories/110000} chickens`
-    f13.textContent = `live for ${nutritionTotal.calories/2400} days (assuming calorie intake of an 18-year-old)`
+    f13.textContent = `live for ${(nutritionTotal.calories/2400).toFixed(2)} days (assuming calorie intake of an 18-year-old)`
     f14.textContent = `rotate the Earth by ${nutritionTotal.calories/1670000000000000000000000000000} degrees at its ordinary rotational velocity`
-    f15.textContent = `graduate ${nutritionTotal.calories/58320} students from Flatiron SE bootcamp`
+    f15.textContent = `graduate ${(nutritionTotal.calories/58320).toFixed(2)} students from Flatiron SE bootcamp`
 }
 
 //get next fact (reveals next fact)  -- F
