@@ -49,13 +49,24 @@ const mouseoverPro = document.getElementById('mouseoverPro')
 const mouseoverServing = document.getElementById('mouseoverServing')
 //rate button
 const rateButton = document.getElementById('rate-my-meal')
-function rateMeal(randomNum, nutritionTotal, plateTotal){
-    if (randomNum < 3)
-        alert(`Keep eating!`)
-    if ((randomNum >= 3) && (randomNum < 7))
-        alert(`More french fries!`)
-    if (randomNum >= 7)
-        alert(`Yum yum!`)
+//set mealCritic values at indices 0,2,4,6,8
+const mealCritic = [
+    `Keep eating!`,,
+    `More french fries!`,,
+    `Can we get a little more asparagus in here?`,,
+    `Ice cream sounds amazing right now ;) https://www.verywellfit.com/chocolate-ice-cream-nutrition-facts-and-health-benefits-5206300`,,
+    `Almost there!`,,
+]
+function rateMeal(randomNum){
+    alert(mealCritic[randomNum])
+}
+
+function updateMealCritic(){
+    mealCritic[1] = `Only ${plateTotal[6]} ${foodObj[6].name}'s?`
+    mealCritic[3] = `You've eaten the same fat content as ${nutritionTotal.fat/96} sticks of butter!`
+    mealCritic[5] = `You've eaten the same sugar content as ${nutritionTotal.sugar/15} oreos!`
+    mealCritic[7] = `You've eaten the same protein content as ${nutritionTotal.protein/57788} cows!`
+    mealCritic[9] = `You've eaten ${nutritionTotal["serving-size"]/1000000} metric tonnes of food!`
 }
 
 //fetch and call initialize
@@ -96,6 +107,12 @@ function getNextAchievement(achievementId){
         currentAchievement = achievementObj[achievementId-1]
         nextAchievement = achievementObj[achievementId]
     }
+    else if (achievementId === 15){
+        currentAchievement = achievementObj[achievementId-1]
+        nextAchievement = {'cal-req': 999999999}
+        previousAchievement = achievementObj[achievementId-2]
+        finishGame()
+    }
     else {
         currentAchievement = achievementObj[achievementId-1]
         nextAchievement = achievementObj[achievementId]
@@ -135,10 +152,21 @@ function addClick(foodImage, singleFood){
         foodDiv.appendChild(newImage)
         addNutrition(singleFood)
         newImage.addEventListener('click', (e) => {
-        foodDiv.removeChild(newImage)
-        removeNutrition(singleFood)
+            if (currentAchievementId !== 15){
+                foodDiv.removeChild(newImage)
+                removeNutrition(singleFood)
+            }
+            else{
+                alert("You've won the game! Please refresh your page to restart!")
+            }
         })
     })
+}
+
+//finish game
+function finishGame(){
+    console.log('game finished!')
+    calGoal.textContent = "You've finished all achievements!"
 }
 
 //mouseout for menu item
@@ -167,6 +195,7 @@ function addNutrition(foodItem){
     renderNutrition()
     renderAchievement()
     renderFact()
+    updateMealCritic()
 }
 
 //decrement when food removed -- F
@@ -176,6 +205,7 @@ function removeNutrition(foodItem){
     renderNutrition()
     renderAchievement()
     renderFact()
+    updateMealCritic()
 }
 
 //render nutrition total -- F
@@ -208,10 +238,18 @@ function renderFact(){
 
 //get next fact (reveals next fact)  -- F
 function getNextFact(){
-    if (currentAchievementId === 0)
-        document.getElementById(`fact-1`).style = 'display: none'
-    document.getElementById(`fact-${currentAchievementId}`).style = ''
-    document.getElementById(`fact-${currentAchievementId+1}`).style = 'display: none'
+    if (currentAchievementId === 0){
+        for (let i = 1; i <= 15; i++)
+            document.getElementById(`fact-${i}`).style = 'display: none'
+    }
+    else {
+        for (let i = 1; i <= currentAchievementId; i++)
+            document.getElementById(`fact-${i}`).style = ''
+    }
+    if (currentAchievementId < 15){
+        //console.log(`hiding fact ${currentAchievementId+1}`)
+        document.getElementById(`fact-${currentAchievementId+1}`).style = 'display: none'
+    }
 }
 
 //render achievement -- F
@@ -220,10 +258,12 @@ function renderAchievement(){
         //update achievement information box with new achievement
         achievementImage.src = nextAchievement.image_url
         achievementDesc.textContent = `${nextAchievement.description}`
-        //update achievement objects
         currentAchievementId++
         getNextAchievement(currentAchievementId)
         getNextFact()
+        //if user skipped achievements
+        if(nutritionTotal.calories >= nextAchievement['cal-req'])
+        renderAchievement()
     }
     //if user removed food 
     if (nutritionTotal.calories < currentAchievement['cal-req']){
@@ -235,7 +275,8 @@ function renderAchievement(){
         getNextFact()
     }
     //update goalpost
-    calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
+    if (currentAchievementId < 15)
+        calGoal.textContent = `${nextAchievement['cal-req'] - nutritionTotal.calories} calories until next achievement!`
 }
 
 //rate-my-meal button

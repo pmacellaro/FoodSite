@@ -1,12 +1,17 @@
 #title {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Somerton Dense', sans-serif;
     
 }
 #foodsContainer{
     display: flex;
     justify-content: center;
 }
+    
+html {background-color: #f7f7f7;
+    opacity: 0.9;
+    background-image: radial-gradient(#dd4150 0.8500000000000001px, #f7f7f7 0.8500000000000001px);
+    background-size: 17px 17px;}
 .foods {
     position:relative;
     columns: 2;
@@ -19,6 +24,27 @@
     overflow-y: auto;
     border-radius: 50%;
     place-items: center
+}
+
+#rate-my-meal{
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid #d90429;
+    background: #d90429;
+}
+
+#rate-my-meal:hover {
+    background: #fff;
+    color: #d90429
 }
 
 #plate {
@@ -72,7 +98,8 @@
 #achievement-image {
     width: 400px;
     height: 300px;
-    text-align: center
+    text-align: center;
+    border-style: inset;
 }
 .container-2{
     display: flex;
