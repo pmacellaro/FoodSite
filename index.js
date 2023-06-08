@@ -294,8 +294,8 @@ foodForm.addEventListener('submit', (e) =>{
         name: e.target.name.value,
         image_url: e.target["image-input"].value,
         nutrition:{
-            calories: Number(e.target.servings.value),
-            sugar: Number(e.target.calories.value),
+            calories: Number(e.target.calories.value),
+            sugar: Number(e.target.sugar.value),
             fat: Number(e.target.fat.value),
             protein: Number(e.target.protein.value),
             "serving-size": Number(e.target.servings.value)
