@@ -1,13 +1,19 @@
 #title {
     text-align: center;
     font-family: 'Somerton Dense', sans-serif;
-
+    
 }
+#foodsContainer{
+    display: flex;
+    justify-content: center;
+}
+    
 html {background-color: #f7f7f7;
     opacity: 0.9;
     background-image: radial-gradient(#dd4150 0.8500000000000001px, #f7f7f7 0.8500000000000001px);
     background-size: 17px 17px;}
 .foods {
+    position:relative;
     columns: 2;
     width: 100px;
     height: 100px;
@@ -16,7 +22,8 @@ html {background-color: #f7f7f7;
     border: 2px solid #000;
     padding: 15px;
     overflow-y: auto;
-    border-radius: 50%
+    border-radius: 50%;
+    place-items: center
 }
 
 #rate-my-meal{
@@ -99,13 +106,17 @@ html {background-color: #f7f7f7;
     flex-direction: row;
     justify-content: space-evenly;
     font-family: Arial, Helvetica, sans-serif;
-    word-break: break-all;
-    white-space: normal;
-    
+    word-break: normal;
+    hyphens: auto;  
 }
 
 #facts{
     width: 400px
+}
+
+#formContainer{
+    display: flex;
+    justify-content: center;
 }
 .foodFormContainer{
     position: absolute;
@@ -113,7 +124,6 @@ html {background-color: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     border: 2px inset;
-    left: 500px;
     border-radius: 5px;
     width: 300px;
     
