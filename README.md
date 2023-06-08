@@ -19,6 +19,14 @@ Features:
         Food items
         Achievements
 
+Challenges:
+    Git-Hub coordination
+    Creative work 
+    Achievement and Facts progression (solved with recursion!)
+    CSS and aesthetic features
+    Click listener for food removal
+    Rendering food on plate
+
 Would-like:
     Drag and drop (js - stretch)
     mouseover/mouseout styled as nutritional box (css)
