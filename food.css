@@ -1,5 +1,6 @@
 #title {
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif  
 }
 
 .foods {
@@ -37,22 +38,18 @@
 }
 
 #mouseoverInfo {
-    position: fixed;
-    right: 100px;
-    height: fit-content;
-    text-align: center;
+    text-align: left;
     font-size: 12px;
     line-height: 2px;
     border: 1px solid black;
-    margin: 20px;
+    margin: 10px;
     float: left;
     padding: 0.5rem;
-    font: arial;
+    font-family: Arial, Helvetica, sans-serif;
     width: 150px;
     overflow-wrap: break-word;
-    
-
 }
+
 
 .h3 {
     font-size: medium;
@@ -68,8 +65,7 @@ aside {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    bottom: 400px;
-    right: 300px;
+    font-family: Arial, Helvetica, sans-serif
 }
 
 #achievement-image {
@@ -81,4 +77,48 @@ aside {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif
 }
+.foodFormContainer{
+    position: absolute;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border: 2px inset;
+    left: 500px;
+    border-radius: 5px;
+    width: 300px;
+    
+
+}
+#foodFormTitle {
+    color: #d90429
+
+}
+input[type=text]{
+    padding: 5px;
+    width: 200px;
+    
+}
+input[type=submit]{
+        min-width: 130px;
+        height: 40px;
+        color: #fff;
+        padding: 5px 10px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border-radius: 5px;
+        border: none;
+        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+        background: #d90429;
+      }
+input[type=submit]:hover {
+        background-color: #ef233c;
+      }
+input[type=submit]:active {
+        top: 2px;
+      }
