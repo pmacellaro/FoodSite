@@ -132,6 +132,19 @@
         "serving-size": 100
       },
       "nutrition_url": "https://fastfoodnutrition.org/mcdonalds/chicken-mcnuggets/4-piece"
+    },
+    {
+      "name": "A Whole Ass Ostrich ",
+      "image_url": "https://animalfactguide.com/wp-content/uploads/2013/10/ostrich2.jpg",
+      "nutrition": {
+        "calories": 1,
+        "sugar": 239520,
+        "fat": 160,
+        "protein": 4540,
+        "serving-size": 1
+      },
+      "nutrition_url": "",
+      "id": 11
     }
   ],
   "achievements": [
