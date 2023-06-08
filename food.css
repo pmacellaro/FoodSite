@@ -52,15 +52,12 @@
 
 
 .h3 {
-    font-size: medium;
-    text-decoration: underline;
-    line-height: 1px
+
+
+    text-decoration: underline
 }
 
-aside {
-    display: flex;
- height: fit-content;
-    } 
+
 .container-1 {
     display: flex;
     flex-direction: row;
@@ -69,9 +66,11 @@ aside {
 }
 
 #achievement-image {
-    display: flex;
-    width: 408px;
-    height: 420px;
+
+
+    width: 400px;
+    height: 300px;
+    text-align: center
 
 }
 .container-2{
