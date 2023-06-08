@@ -217,14 +217,14 @@
       "name": "crying",
       "cal-req": 26200,
       "image_url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Michael_Jordan_crying.jpg",
-      "description": "Achievement Unlocked! You Have Enough Energy to cry for two weeks straight!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Cry For Two Weeks Straight!"
     },
     {
       "id": 13,
       "name": "mow all of central park",
       "cal-req": 44405,
       "image_url": "https://media.istockphoto.com/id/182825693/photo/screaming-gardener-man-pushing-a-red-lawn-mower.jpg?s=612x612&w=0&k=20&c=r6ZHnJ-l6f5q5CmRn3QL7_e4ytG2fgD1TaDK8eCXyBg=",
-      "description": "Achievement Unlocked! You Have Enough Energy to push a lawn mower over all of Central Park!"
+      "description": "Achievement Unlocked! You Have Enough Energy to Push a Lawn Mower Over All of Central Park!"
     },
     {
       "id": 14,
@@ -238,7 +238,7 @@
       "name": "procrastinating",
       "cal-req": 166785,
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLdbREjV3IfL4WIF4JOu_cs9necc4Ws3oFeg&usqp=CAU",
-      "description": "Achievement Unlocked! You Have Enough Energy to procrastinate Flatiron course-work by completing ALL previous milestones, then graduating from Flatiron"
+      "description": "Achievement Unlocked! You Have Enough Energy to Procrastinate Flatiron Course-Work by Completing ALL Previous Milestones, Then Graduating From Flatiron"
     }
   ]
 }
