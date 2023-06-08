@@ -238,7 +238,7 @@ function renderAchievement(){
     if (nutritionTotal.calories >= nextAchievement['cal-req']){
         //update achievement information box with new achievement
         achievementImage.src = nextAchievement.image_url
-        achievementDesc.textContent = `Enough energy to ${nextAchievement.description}`
+        achievementDesc.textContent = `${nextAchievement.description}`
         //update achievement objects
         currentAchievementId++
         getNextAchievement(currentAchievementId)
@@ -248,7 +248,7 @@ function renderAchievement(){
     if (nutritionTotal.calories < currentAchievement['cal-req']){
         //update achievement information box with old achievement
         achievementImage.src = previousAchievement.image_url,
-        achievementDesc.textContent = `Enough energy to ${previousAchievement.description}`
+        achievementDesc.textContent = `${previousAchievement.description}`
         currentAchievementId--
         getNextAchievement(currentAchievementId)
         getNextFact()
