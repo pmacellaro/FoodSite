@@ -174,6 +174,7 @@ function finishGame(){
     console.log('game finished!')
     calGoal.textContent = "You've finished all achievements!"
     calGoal.className = 'rainbow-text'
+    document.getElementById('title').className = 'rainbow-text'
     let counter = 0
     function cycleAchievements(){
         if (counter === 15)
@@ -182,7 +183,7 @@ function finishGame(){
         achievementDesc.textContent = achievementObj[counter].description
         counter++
     }
-    setTimeout(setInterval(cycleAchievements,2000), 10000000)
+    setTimeout(function(){setInterval(cycleAchievements,2000)}, 5000)
 }
 
 //mouseout for menu item

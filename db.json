@@ -132,32 +132,6 @@
         "serving-size": 100
       },
       "nutrition_url": "https://fastfoodnutrition.org/mcdonalds/chicken-mcnuggets/4-piece"
-    },
-    {
-      "name": "Banana",
-      "image_url": "https://4.bp.blogspot.com/-LSr8soUYTAc/UUi5u1ls68I/AAAAAAAAAOA/u7J1j_OC4fE/s1600/banana__group_.jpg",
-      "nutrition": {
-        "calories": 200,
-        "sugar": 80,
-        "fat": 5,
-        "protein": 5,
-        "serving-size": 200
-      },
-      "nutrition_url": "https://4.bp.blogspot.com/-LSr8soUYTAc/UUi5u1ls68I/AAAAAAAAAOA/u7J1j_OC4fE/s1600/banana__group_.jpg",
-      "id": 11
-    },
-    {
-      "name": "null",
-      "image_url": "https://img.favpng.com/14/23/6/empty-set-null-set-computer-icons-mathematics-png-favpng-TZUKp3w2c10PRz21XAy4vzD2B.jpg",
-      "nutrition": {
-        "calories": 49999,
-        "sugar": 4999,
-        "fat": 999,
-        "protein": 999,
-        "serving-size": 999
-      },
-      "nutrition_url": "https://img.favpng.com/14/23/6/empty-set-null-set-computer-icons-mathematics-png-favpng-TZUKp3w2c10PRz21XAy4vzD2B.jpg",
-      "id": 12
     }
   ],
   "achievements": [
