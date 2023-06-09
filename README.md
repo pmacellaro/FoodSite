@@ -26,15 +26,17 @@ Select food items from a pre-built menu with mouse-over displaying nutritional i
     - backwards progression as user removes food
     - skipping progression if user skips achievements (solved with **recursion**!)
 - CSS and aesthetic features
-- Rendering food on plate
+    - Rendering food on plate
 
 ## Would-like:
 - Drag and drop - `js`
 - Mouseover information box styled as nutritional box - `css`
 - Tidy plate rendering - `css`
-- Mouseover listener to pause game finish animation - `js` 
+- Mouseover listener to pause game finish animation - `js`
+- Plate total section (currently only accessible to rate-meal button) - `js`
 
 ## Next-steps:
+- Add accessibility attributes to HTML
 - Game-design Improvements
     - Food item tiered unlocking
     - Food form remodeled as food selector from db.json library
@@ -46,6 +48,6 @@ Select food items from a pre-built menu with mouse-over displaying nutritional i
     
 ### Thank you for viewing our project. 
 
---Shanley Caswell<br>
---Paul Macellaro<br>
+--Shanley Caswell</br>
+--Paul Macellaro</br>
 --Francesco Wai

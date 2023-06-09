@@ -1,5 +1,6 @@
 //global variables
 const dropPlate = document.getElementById('plate') //paul
+const plateContainer = document.querySelector('.plate-container')
 const foodMenu = document.getElementById('food-menu') //shanley 
 const nutritionBox = document.getElementById('nutrition-total') //frankie
 const facts = document.getElementById('facts') 
@@ -149,17 +150,26 @@ function createFoodImg(singleFood){
     return foodImage
 }
 
+//grid handler for food plate
+function updatePlateGrid() {
+    var numImages = plateContainer.childElementCount
+    var columns = Math.ceil(Math.sqrt(numImages));
+    plateContainer.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
+}
+
 //click functionality for menu and plate
 function addClick(foodImage, singleFood){
     foodImage.addEventListener('click', (e) => {
-    let newImage = createFoodImg(singleFood)
-    let foodDiv = document.getElementById('plate')
-    newImage.id = foodImage.id + 1
-        foodDiv.appendChild(newImage)
+        let newImage = createFoodImg(singleFood)
+        newImage.className = 'plate-food'
+        newImage.id = foodImage.id + 1
+        plateContainer.appendChild(newImage)
+        updatePlateGrid()
         addNutrition(singleFood)
         newImage.addEventListener('click', (e) => {
             if (currentAchievementId !== 15){
-                foodDiv.removeChild(newImage)
+                plateContainer.removeChild(newImage)
+                updatePlateGrid()
                 removeNutrition(singleFood)
             }
             else{
