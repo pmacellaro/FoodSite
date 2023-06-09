@@ -4,6 +4,8 @@
     font-size: 50px;
     background: white;
     color: #d90429;
+    border-top: solid #d90429;
+    border-bottom: solid #d90429;
 }
 #foodsContainer{
     display: flex;
