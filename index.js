@@ -1,5 +1,6 @@
 //global variables
 const dropPlate = document.getElementById('plate') //paul
+const plateContainer = document.querySelector('.plate-container')
 const foodMenu = document.getElementById('food-menu') //shanley 
 const nutritionBox = document.getElementById('nutrition-total') //frankie
 const facts = document.getElementById('facts') 
@@ -35,6 +36,8 @@ let previousAchievement
 const calGoal = document.getElementById('calories-until')
 const achievementImage = document.getElementById('achievement-image')
 const achievementDesc = document.getElementById('achievement-description')
+const achievementH1 = document.getElementById('achievement-header1')
+const achievementH2 = document.getElementById('achievement-header2')
 //nutrition total
 let nutritionTotal = {calories: 0, fat: 0, protein: 0, "serving-size": 0, sugar: 0}
 let plateTotal = {}
@@ -98,12 +101,16 @@ function getNextAchievement(achievementId){
     //get current achievement
     if (achievementId === 0){
         currentAchievement = {'cal-req': 0}
+        achievementH1.style = 'display: none'
+        achievementH2.style = 'display: none'
         achievementImage.src = 'https://i.pinimg.com/564x/a0/41/cd/a041cd2d84513f925b1344978d737d8e.jpg'
         achievementDesc.textContent = 'Add Food to Begin!'
         nextAchievement = achievementObj[achievementId]
     }
     else if (achievementId === 1){
         previousAchievement = {'cal-req': 0}
+        achievementH1.style = ''
+        achievementH2.style = ''
         currentAchievement = achievementObj[achievementId-1]
         nextAchievement = achievementObj[achievementId]
     }
@@ -143,17 +150,26 @@ function createFoodImg(singleFood){
     return foodImage
 }
 
+//grid handler for food plate
+function updatePlateGrid() {
+    let numImages = plateContainer.childElementCount
+    let columns = Math.ceil(Math.sqrt(numImages));
+    plateContainer.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
+}
+
 //click functionality for menu and plate
 function addClick(foodImage, singleFood){
     foodImage.addEventListener('click', (e) => {
-    let newImage = createFoodImg(singleFood)
-    let foodDiv = document.getElementById('plate')
-    newImage.id = foodImage.id + 1
-        foodDiv.appendChild(newImage)
+        let newImage = createFoodImg(singleFood)
+        newImage.className = 'plate-food'
+        newImage.id = foodImage.id + 1
+        plateContainer.appendChild(newImage)
+        updatePlateGrid()
         addNutrition(singleFood)
         newImage.addEventListener('click', (e) => {
             if (currentAchievementId !== 15){
-                foodDiv.removeChild(newImage)
+                plateContainer.removeChild(newImage)
+                updatePlateGrid()
                 removeNutrition(singleFood)
             }
             else{
@@ -167,6 +183,17 @@ function addClick(foodImage, singleFood){
 function finishGame(){
     console.log('game finished!')
     calGoal.textContent = "You've finished all achievements!"
+    calGoal.className = 'rainbow-text'
+    document.getElementById('title').className = 'rainbow-text'
+    let counter = 0
+    function cycleAchievements(){
+        if (counter === 15)
+            counter = 0
+        achievementImage.src = achievementObj[counter].image_url
+        achievementDesc.textContent = achievementObj[counter].description
+        counter++
+    }
+    setTimeout(function(){setInterval(cycleAchievements,2000)}, 5000)
 }
 
 //mouseout for menu item

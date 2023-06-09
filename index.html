@@ -4,51 +4,11 @@
     <title>Fooooood</title>
     <link rel="stylesheet" href="food.css">
     <link href="https://fonts.cdnfonts.com/css/somerton-dense" rel="stylesheet">
-    <style>
-      .containerOverlay {
-        position: relative;
-        width: 50%;
-      }
-      
-      #achievement-image {
-        opacity: 1;
-        display: block;
-        transition: .5s ease;
-        backface-visibility: hidden;
-        width: 400px;
-        height: 300px;
-      }
-      
-      .overlay {
-        transition: .5s ease;
-        opacity: 100;
-        position: absolute;
-        top: 10%;
-        left: 200%;
-        transform: translate(-50%, -50%);
-       -ms-transform: translate(-50%, -50%)
-      }
-      .containerOverlay:hover .image {
-       opacity: 0.3;
-}
-      .containerOverlay:hover .overlay {
-        opacity: 1;
-
-      }
-      
-      #achievement-description{
-        background-color: #4CAF50;
-        color: white;
-       font-size: 16px;
-       padding: 16px 32px;
-      }
-    </style>
   </head>
   <body>
     <h1 id="title">Calorosity</h1>
     <div id="foodsContainer">
       <div id="food-menu"></div>
-    
     <div id="mouseoverInfo" style ="visibility: hidden" >
       <h2 id="mouseoverName">Name</h2>
       <h3 class="h3">Calories</h3>
@@ -64,21 +24,21 @@
     </div>
   </div>
     <div class="container-1">
-      <div id="plate">
-        <img src="" alt="">
+      <div class="plate-container">
       </div>
       <button id="rate-my-meal" type="button">Rate-My-Meal</button>  
       <div id="achievement">
           <h4 id="calories-until">calories until next achievement!</h4>
         <div class="containerOverlay">
           <img id="achievement-image" src="https://i.pinimg.com/564x/a0/41/cd/a041cd2d84513f925b1344978d737d8e.jpg">
-       <div class="overlay">
-          <div class='text'id="achievement-description"></div>
+       <div class="achievement-overlay">
+          <p id="achievement-header1" style="display:none"><b>Achievement Unlocked!</b></p>
+          <span id="achievement-header2" style="display:none">You have enough energy to </span>
+          <b><span class='text'id="achievement-description"></span></b>
        </div>
       </div>
     </div>
   </div>
-
     <div class="container-2">
       <div id="nutrition-total">
         <h3>Total Nutritional Information</h3>
@@ -134,8 +94,6 @@
         <input type="submit"id=submit value="Add Food"> 
       </form>
   </div>
-      
-
     <script defer src="./index.js"></script>
   </body>
 </html>

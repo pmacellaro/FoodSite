@@ -1,45 +1,59 @@
-# FoodSite
+# Calorosity
 A tool for learning about nutritional information about various food items as related to assorted science facts and fun achievements. The dieting website nobody asked for!
 
-User Experience:
-    Select food items from a pre-built menu with mouse-over displaying nutritional information of single food items. Add and remove food items to a plate to see total nutritional information. Submit custom food items to create new food items on the menu. Unlock new achievements and facts about the total nutritional information as total calories increases. 
+## User Experience:
+Select food items from a pre-built menu with mouse-over displaying nutritional information of single food items. Add and remove food items to a plate to see total nutritional information. Submit custom food items to create new food items on the menu. Receive ratings of their plate by clicking a rate-my-meal button. Unlock new achievements and facts about the total nutritional information as total calories increases.
 
-Features:
-    Listeners:
-        Click food items from menu to add to plate
-        Click food items from plate to remove from plate
-        Submit food form to add food item to menu (POST working)
-        Mouseover food items to view nutritional information
-            Mouseout hides nutritional information
-        Click rate-my-meal button for rating alerts about the plate
-    Auto-updating Lists:
-        Science facts, unlocked based on total nutritional values of plate
-        Achievement goalposts for total calories of plate 
-    API made-from-scratch with resources:
-        Food items
-        Achievements
+## Quick-Start Guide:
+1. clone repository onto your local machine
+2. cd into directory on your terminal
+3. run `json-server --watch db.json` 
+4. open index.html in your browser to view our website
 
-Challenges:
-    Git-Hub coordination
-    Creative work 
-    Achievement and Facts progression (solved with recursion!)
-    CSS and aesthetic features
-    Click listener for food removal
-    Rendering food on plate
+## Features:
+- Listeners:
+    - **Click** food items from menu to add to plate
+    - **Click** food items from plate to remove from plate
+    - **Submit** food form to add food item to menu (POST working)
+    - **Mouseover** food items to view nutritional information
+        -  **Mouseout** hides nutritional information
+    - **Click** rate-my-meal button for rating alerts about the plate
+- Auto-updating Lists:
+    - _Science Facts_ unlocked based on total nutritional values of plate
+    - _Achievements_ based on total calories of plate 
+- API made-from-scratch with resources:
+    - Food items
+    - Achievements
 
-Would-like:
-    Drag and drop (js - stretch)
-    mouseover/mouseout styled as nutritional box (css)
+## Challenges:
+- Git-Hub coordination
+- Creative work 
+- Achievement and Facts progression 
+    - backwards progression as user removes food
+    - skipping progression if user skips achievements (solved with **recursion**!)
+- CSS and aesthetic features
+    - Rendering food on plate
 
-Next-steps:
-    Food item tiered unlocking (game)
-    Food form remodeled as food selector from db.json library (game)
-    Persisting: plate, facts, achievements (restructuring db.json)
-    Facts not hard-coded into index.js (restructuring db.json)
-    Meal-rater not hard-coded into index.js (restructuring db.json)
+## Would-like:
+- Drag and drop - `js`
+- Mouseover information box styled as nutritional box - `css`
+- Tidy plate rendering - `css`
+- Mouseover listener to pause game finish animation - `js`
+- Plate total section (currently only accessible to rate-meal button) - `js`
+
+## Next-steps:
+- Add accessibility attributes to HTML
+- Game-design Improvements
+    - Food item tiered unlocking
+    - Food form remodeled as food selector from db.json library
+    - Branching achievements and other easter eggs
+- Restructuring db.json for...
+    - **Persisting**: plate, facts, achievements
+    - Facts not hard-coded into index.js
+    - Meal-rater not hard-coded into index.js
     
-Thank you for viewing our project. 
+### Thank you for viewing our project. 
 
---Shanley Caswell
---Paul Macellaro
+--Shanley Caswell</br>
+--Paul Macellaro</br>
 --Francesco Wai
