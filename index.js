@@ -152,8 +152,8 @@ function createFoodImg(singleFood){
 
 //grid handler for food plate
 function updatePlateGrid() {
-    var numImages = plateContainer.childElementCount
-    var columns = Math.ceil(Math.sqrt(numImages));
+    let numImages = plateContainer.childElementCount
+    let columns = Math.ceil(Math.sqrt(numImages));
     plateContainer.style.gridTemplateColumns = 'repeat(' + columns + ', 1fr)';
 }
 

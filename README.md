@@ -4,6 +4,12 @@ A tool for learning about nutritional information about various food items as re
 ## User Experience:
 Select food items from a pre-built menu with mouse-over displaying nutritional information of single food items. Add and remove food items to a plate to see total nutritional information. Submit custom food items to create new food items on the menu. Receive ratings of their plate by clicking a rate-my-meal button. Unlock new achievements and facts about the total nutritional information as total calories increases.
 
+## Quick-Start Guide:
+1. clone repository onto your local machine
+2. cd into directory on your terminal
+3. run `json-server --watch db.json` 
+4. open index.html in your browser to view our website
+
 ## Features:
 - Listeners:
     - **Click** food items from menu to add to plate
