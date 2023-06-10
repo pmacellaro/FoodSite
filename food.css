@@ -91,9 +91,13 @@ html {background-color: #f7f7f7;
     word-wrap: break-word;
     white-space: initial;
 }
+#mouseoverName{
+    margin-top: 0.1em;
+    text-decoration: underline;
+}
 
 .h3 {
-    text-decoration: underline;
+    
     margin-top: 0.1em;
     margin-bottom: 0.1em;
 }
